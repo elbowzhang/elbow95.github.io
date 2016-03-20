@@ -9,4 +9,4 @@ permalink: /about/
 
 个人博客，自2016.03.19日起与此地纪录学习、生活、杂七杂八等。
 
-联系请E-mail至<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+联系请发邮件<a href="mailto:{{ site.email }}">{{ site.email }}</a>或访问{% include icon-github.html username=site.github_username %}
