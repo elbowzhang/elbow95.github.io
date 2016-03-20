@@ -3,10 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
-我，大学生一枚，奋斗不息生命不止的工科男，坚定的爱国无党派主义者。
 
-沉积在岁月里，随尘埃飞扬。
+这是一个基于Jekyll主题的个人博客，博主现为大学生一枚，想要得到更多关于本博客主题的信息请移步[jekyllrb.com](http://jekyllrb.com/)
 
-个人博客，自2016.03.19日起与此地纪录学习、生活、杂七杂八等。
+你可以在这里找到Jekyll new theme的源代码
+{% include icon-github.html username="jglovier" %} /
+[jekyll-new](https://github.com/jglovier/jekyll-new)
 
-联系请E-mail至<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+你可以在这里找到jekyll的源代码
+{% include icon-github.html username="jekyll" %} /
+[jekyll](https://github.com/jekyll/jekyll)
