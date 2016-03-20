@@ -11,10 +11,11 @@ email: zhouzhouatchina@msn.cn
 description: > # this means to ignore newlines until "baseurl:"
   博主本人主爱好嵌入式系统，副爱好android，出于好记性不如烂笔头的原则，在这里将平时遇到的
   一些问题记录下来，如您无意中浏览到此地，有意见请联系左端E-mail，更多关于本博客信息移步About
+sitedescription: >
+  Personal Blog.Powered by <a href="http://jekyllrb.com">Jekyll</a>.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "" # the base hostname & protocol for your site
+github_username:  elbow95
 
 # Build settings
 markdown: kramdown
