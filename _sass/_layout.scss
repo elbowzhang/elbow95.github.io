@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-	border-bottom: 3px solid $grey-color-light;
     min-height: 70px;
 
     // Positioning context for the mobile navigation icon
@@ -14,12 +13,11 @@
 }
 
 .site-title {
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 300;
 	line-height: 70px;
     letter-spacing: -1px;
-
-    
+	font-family: STLiti;
 }
 
 .site-nav {
@@ -193,7 +191,53 @@
     font-size: 24px;
 }
 
+.post-archive {
+	margin-left: 0;
+	padding-top: 20px;
+	
+	> h1 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	> li {
+        margin-left: $spacing-unit;
+		font-size: 17px;
+    }
+}
 
+.post-categories {
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/**
+  * 分类列表
+  */
+.list-categories{
+	margin-left: 0;
+	padding-top: 20px;
+	
+	> h1 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	> li {
+        margin-left: $spacing-unit;
+		font-size: 17px;
+    }
+}
+
+.list-timeline {
+	border-left: 4px solid $grey-color-light;
+	list-style: none;
+	
+	>li {
+		margin-left: 20px;
+	}
+}
 
 /**
  * Posts
@@ -215,28 +259,25 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+	
+    h1 {
+        font-size: 30px;
+        @include media-query($on-laptop) {
+            font-size: 26px;
+        }
+    }
 
     h2 {
-        font-size: 32px;
-
+        font-size: 24px;
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 20px;
         }
     }
 
     h3 {
-        font-size: 26px;
-
+        font-size: 18px;
         @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 }

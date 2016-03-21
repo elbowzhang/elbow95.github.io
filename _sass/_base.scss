@@ -8,7 +8,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+gotop {
+	margin-left: 1000px;
+}
 
 /**
  * Basic styling
@@ -67,6 +69,7 @@ figcaption {
  */
 ul, ol {
     margin-left: $spacing-unit;
+	list-style-type: none;
 }
 
 li {
@@ -114,6 +117,8 @@ blockquote {
     padding-left: $spacing-unit / 2;
     font-size: 16px;
     font-style: italic;
+	letter-spacing: 0.5px;
+	font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
 
     > :last-child {
         margin-bottom: 0;

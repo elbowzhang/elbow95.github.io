@@ -3,13 +3,10 @@
   <div class="wrapper">
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     <nav class="site-nav">
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
+		<a class="page-link" href="/header/archive/">Archive</a>
+		<a class="page-link" href="/header/categories/">Categories</a>
+        <a class="page-link" href="/header/timeline/">TimeLine</a>
+        <a class="page-link" href="/header/about/">About</a>
     </nav>
   </div>
 </header>
