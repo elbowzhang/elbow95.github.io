@@ -2,6 +2,7 @@
 layout: post
 title:  "将Github Pages重定义到自定义域名"
 date:   2016-03-20
+categories: [github pages]
 ---
 博客搭建工作基本完成之后，用腾讯云域名服务申请了一个.cn顶级域名，完成学生认证领到了一个域名代金券，可以算是免费买到了一个域名。  
 重新定义博客的域名首先需要在rep根目录下新建一个CNAME文件(注意：没有后缀)  
