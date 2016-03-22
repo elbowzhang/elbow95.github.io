@@ -18,6 +18,15 @@
 	line-height: 70px;
     letter-spacing: -1px;
 	font-family: STLiti;
+	
+	// here need some modified
+	&:visited {
+        color: darken($text-color, 0%);
+    }
+
+    &:hover {
+        color: $text-color;
+    }
 }
 
 .site-nav {
