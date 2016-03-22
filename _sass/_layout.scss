@@ -18,14 +18,11 @@
 	line-height: 70px;
     letter-spacing: -1px;
 	font-family: STLiti;
-	
-	// here need some modified
-	&:visited {
-        color: darken($text-color, 0%);
-    }
+	text-decoration: none;
+	color: $grey-color;
 
     &:hover {
-        color: $text-color;
+        color: $grey-color;
     }
 }
 
@@ -40,6 +37,7 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
+		text-decoration: none;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -119,9 +117,12 @@
 
 .footer-col-wrapper {
     font-size: 14px;
-    color: $grey-color;
+    color: lighten($grey-color,10%);
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
+	> a{
+		color: lighten($grey-color,10%);
+	}
 }
 
 .footer-col {
@@ -192,12 +193,13 @@
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
-	font-style: italic
+	font-style: italic;
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
+	text-decoration: none;
 }
 
 .post-archive {
@@ -257,7 +259,7 @@
 }
 
 .post-title {
-    font-size: 35px;
+    font-size: 30px;
     letter-spacing: -1px;
     line-height: 1;
 
