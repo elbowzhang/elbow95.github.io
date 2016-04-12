@@ -22,6 +22,3 @@ categories: [github pages]
 1. 对博客header添加CATEGORIES、TAGS等目录  
 2. 优化博客结构  
 3. 增加图床上传图片等内容  
-4. af
-
-- adafs
