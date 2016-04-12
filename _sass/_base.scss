@@ -70,9 +70,14 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul {
     margin-left: $spacing-unit;
-	list-style-type: none;
+	list-style-type: disc;
+}
+
+ol {
+    margin-left: $spacing-unit;
+	list-style-type: decimal;
 }
 
 li {
@@ -116,8 +121,8 @@ blockquote {
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-size: 16px;
-	letter-spacing: 0.5px;
-	font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+    letter-spacing: 0.5px;
+    font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
 
     > :last-child {
         margin-bottom: 0;
@@ -130,9 +135,10 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    border: none;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;;
+    border-radius: 4px;
+    background-color: #F4F4F4;
 }
 
 code {

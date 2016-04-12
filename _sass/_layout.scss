@@ -6,21 +6,21 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
-	
+
 	max-width: 820px;
     margin-right: auto;
     margin-left: auto;
 }
 
 .site-title {
-    font-size: 30px;
-    font-weight: 300;
-	line-height: 60px;
-    letter-spacing: -1px;
-	font-family: STLiti;
-	text-decoration: none;
-	color: $grey-color;
-	
+    font-size: 24px;
+    //font-weight: 100;
+    line-height: 60px;
+    //letter-spacing: 2px;
+    font-family:  "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman";
+    text-decoration: none;
+    color: $grey-color;
+
 
     &:hover {
         color: $grey-color;
@@ -184,10 +184,11 @@
 .post-list {
     margin-left: 0;
     list-style: none;
-	padding-top: 40px;
+    padding-top: 40px;
 
     > li {
         margin-bottom: $spacing-unit;
+        list-style-type: none;
     }
 }
 
@@ -200,21 +201,27 @@
 .post-link {
     display: block;
     font-size: 18px;
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .post-archive {
 	margin-left: 0;
 	padding-top: 20px;
-	
+
 	> h1 {
 		margin-top: 20px;
 		margin-bottom: 10px;
+        list-style-type: none;
 	}
-	
+
 	> li {
         margin-left: $spacing-unit;
 		font-size: 17px;
+        padding-top: 3px;
+        list-style-type: disc;
+        > a{
+            text-decoration: none;
+        }
     }
 }
 
@@ -230,22 +237,28 @@
 .list-categories{
 	margin-left: 0;
 	padding-top: 20px;
-	
+    list-style-type: none;
+
 	> h1 {
 		margin-top: 20px;
 		margin-bottom: 10px;
 	}
-	
+
 	> li {
         margin-left: $spacing-unit;
 		font-size: 17px;
+        padding-top: 3px;
+        list-style-type: disc;
+        > a{
+            text-decoration: none;
+        }
     }
 }
 
 .list-timeline {
 	border-left: 4px solid $grey-color-light;
 	list-style: none;
-	
+
 	>li {
 		margin-left: 20px;
 	}
@@ -270,7 +283,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-	text-align: justify;
+	  text-align: justify;
     h1 {
         font-size: 30px;
         @include media-query($on-laptop) {
