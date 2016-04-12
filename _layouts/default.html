@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
+    {% include head.html %}
+    <body>
+        <!--网页不可复制粘贴-->
+        <body
+            leftmargin=0
+            topmargin=0
+            ondragstart='return false'
+            onselectstart ='return false'
+            onselect='document.selection.empty()'
+            oncopy='document.selection.empty()'
+            onbeforecopy='return false'
+            onmouseup='document.selection.empty()'>
     {% include header.html %}
 	<div  style="border-bottom: 1px solid #ddd"></div>
     <div class="page-content">
