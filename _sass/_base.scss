@@ -131,10 +131,10 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0.5px;
     font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
-    font-style: italic;
+    //font-style: italic;
 
     > :last-child {
         margin-bottom: 0;
@@ -146,7 +146,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 14px;
     border: none;
     font-family: "Lucida Console", "Courier New", Courier, monospace;
     border-radius: 4px;

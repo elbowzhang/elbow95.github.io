@@ -48,10 +48,6 @@
         &:not(:last-child) {
             margin-right: 20px;
         }
-        &::selection{
-            color: #ed5252;
-            font-weight: bold;
-        }
     }
 }
 
@@ -59,7 +55,12 @@
  * Site footer
  */
 .site-footer {
+    position: relative;
+	max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
     padding-bottom: 40px;
+    border-top: 1px solid #f1f1f1;
 }
 
 .footer-heading {
@@ -166,6 +167,7 @@
 	padding-top: 20px;
 
 	> h1 {
+        font-size: 25px;
 		margin-top: 20px;
 		margin-bottom: 10px;
         list-style-type: none;
@@ -173,7 +175,7 @@
 
 	> li {
         margin-left: $spacing-unit;
-		font-size: 17px;
+		font-size: 16px;
         padding-top: 3px;
         list-style-type: disc;
         > a{
@@ -197,13 +199,16 @@
     list-style-type: none;
 
 	> h1 {
+        font-family: "annoymousregular";
 		margin-top: 20px;
 		margin-bottom: 10px;
+        font-size: 25px;
+        font-weight: bold;
 	}
 
 	> li {
         margin-left: $spacing-unit;
-		font-size: 17px;
+		font-size: 16px;
         padding-top: 3px;
         list-style-type: disc;
         > a{
@@ -241,16 +246,9 @@
 .post-content {
     margin-bottom: $spacing-unit;
 	text-align: justify;
-    h1 {
-        font-size: 23px;
-        font-weight: bold;
-        @include media-query($on-laptop) {
-            font-size: 26px;
-        }
-    }
 
     h2 {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         @include media-query($on-laptop) {
             font-size: 20px;
