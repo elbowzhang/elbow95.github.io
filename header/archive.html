@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  Archive
+title:  archive
 ---
-  <ul class="post-archive">
+<ul class="post-archive">
     {% for post in site.posts %}
 	  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
 	  {% if year != y %}
@@ -15,4 +15,4 @@ title:  Archive
 		<a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a>
 	  </li>
     {% endfor %}
-  </ul>
+</ul>

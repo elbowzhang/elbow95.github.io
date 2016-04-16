@@ -20,5 +20,3 @@ I have a long time studied in the Smartcar Lab, I am very grateful for this plac
 Now, in this dormitory, one guy playing game, the other two are listening Feng Timo who singing in a live streaming platform named Douyu TV, her voice is very clear and beautiful. A great girl.  
 
 It's time to call with my darling.  
-
-2016/3/23 21:36:10

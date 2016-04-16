@@ -11,5 +11,3 @@ Put down everything but you, being a dedicated man.
 也行会颓废，也许会想到放弃，也许有太多也许，但是需要一往直前。  
 
 为了高考的不甘。  
-
-<span style="float:right">--2016.3.28 night</span>  

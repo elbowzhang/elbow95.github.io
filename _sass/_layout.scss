@@ -4,16 +4,9 @@
 .site-header {
     min-height: 50px;
     // Positioning context for the mobile navigation icon
+    background: #f3f3f3;
     position: relative;
-	max-width: 760px;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    .wrapper{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    border-bottom: 1px solid #f1f1f1;
+    padding-top: 20px;
 }
 
 .site-title {
@@ -33,11 +26,6 @@
     float: right;
     font-size: 0.75em;
     line-height: 35px;
-    padding-top: 5px;
-
-    .menu-icon {
-        display: none;
-    }
 
     .page-link {
         color: $text-color;
@@ -56,9 +44,9 @@
  */
 .site-footer {
     position: relative;
-	max-width: 760px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 40px;
     padding-bottom: 40px;
     border-top: 1px solid #f1f1f1;
 }
@@ -154,6 +142,14 @@
     font-size: $small-font-size;
     color: $grey-color;
 	font-style: italic;
+    margin-bottom: 40px;
+    > time{
+        margin-top: 5px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top: 1px solid #e6e6e6;
+    }
 }
 
 .post-link {
@@ -167,7 +163,8 @@
 	padding-top: 20px;
 
 	> h1 {
-        font-size: 25px;
+        font-family: "anonymousregular";
+        font-size: 18px;
 		margin-top: 20px;
 		margin-bottom: 10px;
         list-style-type: none;
@@ -195,15 +192,14 @@
   */
 .list-categories{
 	margin-left: 0;
-	padding-top: 20px;
+	//padding-top: 20px;
     list-style-type: none;
 
 	> h1 {
-        font-family: "annoymousregular";
+        font-family: "anonymousregular";
 		margin-top: 20px;
 		margin-bottom: 10px;
-        font-size: 25px;
-        font-weight: bold;
+        font-size: 18px;
 	}
 
 	> li {
@@ -214,6 +210,21 @@
         > a{
             text-decoration: none;
         }
+    }
+}
+
+.categories{
+    height: 20px;
+    >a{
+        text-decoration: none;
+        font-family: "anonymousregular";
+        font-size: 15px;
+        padding: 3px 5px 1px;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #ccc;
+        color: #3C3C3C;
+        margin-right: 5px;
     }
 }
 
@@ -230,13 +241,15 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    text-align: center;
+    //margin-bottom: $spacing-unit;
 	padding-top: 40px;
 }
 
 .post-title {
     font-size: 25px;
     line-height: 1;
+    padding-bottom: 10px;
 
     @include media-query($on-laptop) {
         font-size: 36px;
