@@ -11,7 +11,7 @@ categories: [github pages]
 
 >1.首先注册七牛账号并完成实名认证，就会有免费的10G存储空间以及10G的下载流量，还有10万次PUT和100万次GET请求。  
 >
->2.下载[qrsync 命令行上传同步工具](http://developer.qiniu.com/code/v6/tool/qrsync.html)。  
+>2.下载[qrsync 命令行上传同步工具](http://developer.qiniu.com/code/v6/tool/qrsync.html){:target="_blank"}。  
 >
 >3.根据文档要求创建conf.json配置文件，这里对于windows用户可以把解压的qrsync.exe文件目录添加到环境变量，注意在`"dest":"qiniu:access_key=<AccessKey>.."`这里，记得填写AccessKey或其他参数时均需要把`<>`去掉。  
 >
