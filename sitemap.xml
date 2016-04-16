@@ -11,24 +11,24 @@ title: Sitmap
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>{{site.baseurl}}</loc>
+  <loc>{{site.url}}</loc>
 </url>
 <url>
-  <loc>{{site.baseurl}}/header/archive.html</loc>
+  <loc>{{site.url}}/header/archive.html</loc>
 </url>
 <url>
-  <loc>{{site.baseurl}}/header/categories.html</loc>
+  <loc>{{site.url}}/header/categories.html</loc>
 </url>
 <url>
-  <loc>{{site.baseurl}}/timeline/index.html</loc>
+  <loc>{{site.url}}/timeline/index.html</loc>
 </url>
 <url>
-  <loc>{{site.baseurl}}/header/about.html</loc>
+  <loc>{{site.url}}/header/about.html</loc>
 </url>
 
 {% for post in site.posts %}
       <url>
-        <loc>{{site.baseurl}}{{ post.url }}</loc>
+        <loc>{{site.url}}{{ post.url }}</loc>
       </url>
 {% endfor %}
 </urlset>
