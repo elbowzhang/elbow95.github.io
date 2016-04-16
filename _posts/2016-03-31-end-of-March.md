@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "写在三月的最后一个晚上"
+title:  "三月的最后一个晚上"
 date:   2016-03-31
-categoeies: [life]
+categories: [life]
 ---
 
 三月还有几个小时就要结束了。  
