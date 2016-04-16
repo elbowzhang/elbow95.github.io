@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Markdwon通过如何新窗口打开超链接"
+title:  "Markdwon通过新窗口打开超链接"
 date:   2016-4-16
 categories:  [markdown]
 ---
