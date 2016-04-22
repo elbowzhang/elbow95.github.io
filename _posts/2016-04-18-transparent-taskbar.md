@@ -1,8 +1,8 @@
 ---
 layout:  post
-title:   "Make your win10 taskbar complete transparency"
+title:   "Make your win10 taskbar more transparency"
 date:    2016-4-19
-categories:  [Windows]
+categories:  [windows]
 ---
 The new OS of Windows - win10, has the setting to transparent the taskbar which can't help you to make it complete transparency.But you can use the following steps to achieve the order without any third party software.  
 
@@ -20,7 +20,7 @@ Press `win + R` keys to open the Run window and then input `regedit`, finally cl
 Expand the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced` in the Regedit Editor.  
 Then add a new DWORD(32-bit) value named `UseOLEDTaskbarTransparency` on the right side.  
 
-<div class="image-wrapper" style="text-align: center"><img src="http://7xs7p7.com1.z0.glb.clouddn.com/post/2016-04-18/regedit.jpg"></div>
+<div class="image-wrapper" style="text-align: center"><img src="http://7xs7p7.com1.z0.glb.clouddn.com/post/2016-04-18/regedit.jpg" width="650px"></div>
 
 Double-click the value you have just added, then change the Value data to `1`, click OK to save.  
 
