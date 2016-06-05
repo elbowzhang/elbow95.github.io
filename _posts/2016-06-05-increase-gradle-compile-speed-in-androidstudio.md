@@ -17,7 +17,7 @@ Gradle最新版本号可以到其官网查看[http://gradle.org/gradle-download/
 ## 使用多线程编译  
 在项目根目录中创建`gradle.properties`，加入以下配置  
 
-{% highlight ruby %}
+{% highlight c %}
 org.gradle.daemon=true  
 org.gradle.parallel=true  
 org.gradle.jvmargs=-Xmx1024m  
@@ -26,7 +26,7 @@ org.gradle.jvmargs=-Xmx1024m
 ## 打开dex增量编译
 这还是一个实验性的功能，但是还是推荐打开试试，在项目主Module下的build.grade中加入
 
-{% highlight ruby %}
+{% highlight c %}
 dexOptions {  
     incremental true  
 }
