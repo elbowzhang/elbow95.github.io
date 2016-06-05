@@ -198,14 +198,15 @@
 
 	> h1 {
         font-family: "anonymousregular";
-		margin-top: 20px;
-		margin-bottom: 10px;
+        color: #3C3C3C;
+		    margin-top: 20px;
+		    margin-bottom: 10px;
         font-size: 18px;
 	}
 
 	> li {
         margin-left: $spacing-unit;
-		font-size: 16px;
+		    font-size: 16px;
         padding-top: 3px;
         list-style-type: disc;
         > a{
