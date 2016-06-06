@@ -24,7 +24,7 @@ org.gradle.jvmargs=-Xmx1024m
 {% endhighlight %}
 
 ## 打开dex增量编译
-这还是一个实验性的功能，但是还是推荐打开试试，在项目主Module下的build.grade中加入  
+这还是一个实验性的功能，但是还是推荐打开试试，在项目主Module下的build.grade中加入
 
 {% highlight c %}
 dexOptions {
