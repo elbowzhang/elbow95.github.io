@@ -2,11 +2,7 @@
 @media screen and (max-width: 768px) {
 
     * {
-        max-width: 460px;
-    }
-
-    body {
-        font-size: large;
+        max-width: 450px;
     }
 
     .container {
@@ -15,11 +11,6 @@
 
     div.timelineToggle {
        float:none;
-    }
-
-    .timelineEvent div.media {
-        display:none;
-        float:none;
     }
 
     .timelineMinor dt {
