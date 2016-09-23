@@ -1,31 +1,40 @@
 @font-face {
     font-family: 'anonymousregular';
     src: url('/assets/fonts/Anonymous-webfont.eot');
-    src: url('/assets/fonts/Anonymous-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/Anonymous-webfont.woff') format('woff'),
-         url('/assets/fonts/Anonymous-webfont.ttf') format('truetype'),
-         url('/assets/fonts/Anonymous-webfont.svg#anonymousregular') format('svg');
+    src: url('/assets/fonts/Anonymous-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Anonymous-webfont.woff') format('woff'), url('/assets/fonts/Anonymous-webfont.ttf') format('truetype'), url('/assets/fonts/Anonymous-webfont.svg#anonymousregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+ul {
     margin: 0;
     padding: 0;
 }
 
 gotop {
-	margin-left: 74%;
-    > a{
+    margin-left: 74%;
+
+    > a {
         text-decoration: none;
     }
 }
-
 /**
  * Basic styling
  */
@@ -40,21 +49,25 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
-
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
+%vertical-rhythm,
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
     margin-bottom: $spacing-unit / 2;
 }
-
-
-
 /**
  * Images
  */
@@ -62,9 +75,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
-
 /**
  * Figures
  */
@@ -75,40 +85,36 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
-
 /**
  * Lists
  */
 ul {
     margin-left: $spacing-unit;
-	list-style-type: disc;
+    list-style-type: disc;
 }
 
 ol {
     margin-left: $spacing-unit;
-	list-style-type: decimal;
+    list-style-type: decimal;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
+     > ol,
+    > ul {
+        margin-bottom: 0;
     }
 }
-
-
-
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: $base-font-weight;
 }
-
-
-
 /**
  * Links
  */
@@ -118,34 +124,25 @@ a {
 
     &:hover {
         color: lighten($text-color, 15%);
-		text-decoration: none;
+        text-decoration: none;
     }
 }
-
-
-
 /**
  * Blockquotes
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    margin: 20px 40px;
+    border-left: 3px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+    font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai", serif;
     font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
 }
-
 /**
  * Code formatting
  */
-pre,
-code {
+code,
+pre {
     font-size: 14px;
     border: none;
     font-family: "Lucida Console", "Courier New", Courier, monospace;
@@ -167,48 +164,36 @@ pre {
         padding-left: 0;
     }
 }
-
-
-
 /**
  * Wrapper
  */
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     @extend %clearfix;
-
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        max-width: calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
 }
-
-
-
 /**
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
         clear: both;
     }
 }
-
-
-
 /**
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
