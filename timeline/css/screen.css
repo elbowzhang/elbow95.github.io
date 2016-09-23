@@ -11,7 +11,7 @@ body {
 
 .container {
     width: 760px;
-
+    margin: auto;
     margin-top: 40px;
 
     *zoom: 1;
