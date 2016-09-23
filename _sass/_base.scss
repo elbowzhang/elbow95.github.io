@@ -49,10 +49,7 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> e272d3e23e4ea6c52d17f97619cb5108ad82a3d2
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -136,12 +133,13 @@ a {
  */
 blockquote {
     color: $grey-color;
-    margin: 20px 40px;
+    
     border-left: 3px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai", serif;
     font-style: italic;
 }
+
 /**
  * Code formatting
  */
