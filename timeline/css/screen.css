@@ -142,19 +142,19 @@ dl.timelineMinor {
 }
 
 .timelineMinor dt a {
-    color: #606c76;
+    color: #2C3E50;
     cursor: pointer;
     text-decoration: none;
 }
 
 .timelineMinor dt a.closed {
-    color: #606c76;
+    color: #2C3E50;
     font-size: 1em;
     margin-left: 0;
 }
 
 .timelineMinor dt a.open {
-    color: #606c76;
+    color: #2C3E50;
 }
 
 .timelineMinor dt a:hover {
@@ -171,7 +171,7 @@ dl.timelineMinor {
     color: #8E8E8E;
     clear: both;
     float: left;
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin: 0;
     white-space: nowrap;
 }
@@ -183,7 +183,7 @@ dl.timelineMinor {
     margin: 6px 0 10px;
     width: 400px;
     letter-spacing: 0.2px;
-    color: #2C3E50;
+    color: #8E8E8E;
 }
 
 .timelineEvent h4 {

@@ -303,7 +303,7 @@
 
 /* PHOTOS */
 #photos-index{
-  width: 1024px;
+  width: 760px;
   margin: auto;
   text-align: center;
   margin: 20px auto 20px auto;
@@ -314,7 +314,7 @@
   position: relative;
 }
 #photos-index img{
-  width: 320px;
+  width: 240px;
 }
 #photos-index a span{
   position: absolute;
@@ -322,7 +322,7 @@
   padding: 10px 0px;
   z-index: 1000;
   left: 0px;
-  width: 320px;
+  width: 240px;
   text-align:center;
   color: rgba(0,0,0,0);
   font-family: "anonymousregular";
@@ -336,7 +336,7 @@
 }
 
 #photo-content{
-  width: 1024px;
+  width: 760px;
   margin: 40px auto;
 }
 

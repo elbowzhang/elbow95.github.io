@@ -14,7 +14,7 @@ Gradle最新版本号可以到其官网查看<http://gradle.org/gradle-download/
 这里我们需要手动让Android Studio使用最新版本号，打开Project Structure，在下图中更改版本号
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://7xs7p7.com1.z0.glb.clouddn.com/post%2F2016-06-05%2Fprojectstructure.png" width="500px">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-06-05/projectstructure.png" width="500px">
 </div>
 
 之后在Android Studio自带的terminal中输入`./gradlew wrapper`即可下载并自动配置gradle 2.13
