@@ -1,36 +1,22 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
-
-
+--- # Only the main Sass file needs front matter (the dashes are enough) --- @charset  "utf-8";
 // Our variables
 $base-font-family: Bitter, Georgia, "Helvetica Neue","Hiragino Sans GB",Arial,"微软雅黑",sans-serif;
-$base-font-size:   16px;
+$base-font-size: 16px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #606c76;
+$spacing-unit: 30px;
+$text-color: #606c76;
 $background-color: #ffffff;
-$brand-color:      #606c76;
-$link-color:	   #9b4dca;
-
-$grey-color:       #828282;
+$brand-color: #606c76;
+$link-color: #9b4dca;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color, 30%);
-$grey-color-dark:  darken($grey-color, 25%);
-
+$grey-color-dark: darken($grey-color, 25%);
 // Width of the content area
-$content-width:    820px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
+$content-width: 820px;
+$on-palm: 600px;
+$on-laptop: 800px;
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -39,16 +25,9 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+     @media screen and (max-width: $device){
         @content;
     }
 }
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+@import "base", "layout", "syntax-highlighting";
