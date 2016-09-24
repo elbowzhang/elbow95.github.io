@@ -4,6 +4,8 @@ title: Maybe I can write a post without Chinese
 date: '2016-3-23'
 categories:
   - jottings
+category:
+  -post
 ---
 
 It should be the first essay after built up this blog.

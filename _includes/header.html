@@ -1,11 +1,17 @@
 <header class="site-header">
   <div class="wrapper">
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    <nav class="site-nav">
-        <a class="page-link" href="/photos/index.html">photos</a>
-		<a class="page-link" href="/header/categories.html">categories</a>
-        <a class="page-link" href="/timeline/index.html">timeline</a>
-        <a class="page-link" href="/header/about.html">about</a>
-    </nav>
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <a class='site-title1'>#</a>
+        <a class='site-title2' href="/header/{% if page.category != 'about'%}{{page.category}}.html{% endif %}">
+          {{page.category}}
+        </a>
+
+        <nav class="site-nav">
+            <a class="page-link" href="/header/blog.html">blog</a>
+            <a class="page-link" href="/header/photos.html">photos</a>
+    		<a class="page-link" href="/header/categories.html">categories</a>
+            <a class="page-link" href="/header/timeline.html">timeline</a>
+        </nav>
+
   </div>
 </header>

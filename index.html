@@ -1,16 +1,28 @@
 ---
 layout: default
+title:  about - chen's blog
+category: about
 ---
 
-<div class="home">
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<div class="post-header"></div>
+<article class="post">
+  <div class="post-content">
+      <blockquote>
+      <p>
+          Computer programming is an art form, like the creation of poetry or music.
+          <span style="float:right">- Donald Knuth</span>
+      </p>
+      </blockquote>
+      </br>
+      I am Zhang Zhen(<i>Clarence</i>), currently a 4nd year university student in <i>Ludong university</i>.
+      I am also a determined patriotic independent. <br/><br/>
+      The time of last three years I majored in <i>Electrical Engineering and Automation</i>,
+      I am good at C language programming, and I love C#, ARM embedded system, Android and all geek things.<br/><br/>
+      I am a big fan of <i>Google</i>, <i>Microsoft</i>, <i>Apple</i>, <i>Linux</i>, <i>NASA</i> and science.
+      In my free time I write blogs, read books and watch movies.
+      "<i>The Legend of 1900</i>" is my favorite movie. And <i>C</i> is my favorite programming language all the time.<br/><br/>
+      I use this personal blog to record learning, life and other things since Mar 2016.<br/><br/>
+      You can contact me by sending an e-mail to <a href="mailto:{{ site.email }}">{{ site.email}}</a> or access {% include icon-github.html username=site.github_username %}.
+  </div>
+
+</article>

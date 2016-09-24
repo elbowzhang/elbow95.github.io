@@ -5,7 +5,7 @@
     min-height: 50px;
     // Positioning context for the mobile navigation icon
     background: #f3f3f3;
-    position: relative;
+
     padding-top: 20px;
 }
 
@@ -18,7 +18,26 @@
     color: $grey-color;
 
     &:hover {
-        color: $grey-color;
+        color: #ed5252;
+        transition-duration: 1s;
+    }
+}
+
+.site-title1 {
+    font-size: 0.8em;
+    font-family:  "anonymousregular";
+    color: #ed5252;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.site-title2 {
+    color: #545454;
+    font-family:  "anonymousregular";
+    text-decoration: none;
+    &:hover{
+        color: #ed5252;
+        transition-duration: 1s;
     }
 }
 
@@ -138,6 +157,22 @@
     > li {
         margin-bottom: $spacing-unit;
         list-style-type: none;
+
+        a::after{
+          content: "<<";
+          opacity: 0;
+          font-family: "anonymousregular";
+          font-size: 0.8em;
+          position: relative;
+          right: -10px;
+          transition: all .4s ease-in-out;
+        }
+
+        a:hover::after{
+          opacity: 1;
+          transition: all .4s ease-in-out;
+          color: #ed5252;
+        }
     }
 }
 
@@ -159,6 +194,9 @@
     //display: block;
     font-size: 17px;
     text-decoration: none;
+    &:hover{
+        color: $title-color;
+    }
 }
 
 .post-archive {
@@ -204,19 +242,39 @@
 
 	> h1 {
         font-family: "anonymousregular";
-        color: #3C3C3C;
-		    margin-top: 20px;
-		    margin-bottom: 10px;
+        color: $text-color;
+		margin-top: 20px;
+		margin-bottom: 10px;
         font-size: 18px;
 	}
 
 	> li {
         margin-left: $spacing-unit;
-		    font-size: 16px;
+		font-size: 16px;
         padding-top: 3px;
         list-style-type: disc;
         > a{
             text-decoration: none;
+
+            &:hover{
+                color: $title-color;
+            }
+
+            &::after{
+              content: "<<";
+              opacity: 0;
+              font-family: "anonymousregular";
+              font-size: 0.8em;
+              position: relative;
+              right: -10px;
+              transition: all .4s ease-in-out;
+            }
+
+            &:hover::after{
+              opacity: 1;
+              transition: all .4s ease-in-out;
+              color: #ed5252;
+            }
         }
     }
 }
@@ -226,15 +284,16 @@
     width: 760px;
     margin: auto;
     >a{
+        display: inline-block;
         text-decoration: none;
         font-family: "anonymousregular";
         font-size: 15px;
-        padding: 3px 5px 1px;
-        border-radius: 4px;
+        padding: 3px 5px;
+        border: 1px solid #48C9B0;
+        border-radius: 3px;
         cursor: pointer;
-        background: #ccc;
-        color: #3C3C3C;
-        margin-right: 5px;
+        color: $text-color;
+        margin: 5px;
     }
 }
 
@@ -281,6 +340,17 @@
         @include media-query($on-laptop) {
             font-size: 20px;
         }
+
+        &:before{
+            content: "#";
+            color: #48C9B0;
+            display: inline-block;
+            float: left;
+            padding: 3px 10px 0px 0px;
+            margin-top: -0.3em;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
     }
 
     h3 {
@@ -292,6 +362,10 @@
         font-size: 16px;
         @include media-query($on-laptop) {
             font-size: 16px;
+        }
+
+        >a {
+            margin: 5px;
         }
     }
 }
@@ -344,6 +418,23 @@
   display:block;
   margin: 0px auto 40px auto;
   border: 1px solid #333;
+}
+
+/* ======= DEMO LAYOUT ======= */
+
+body {
+    /*background-image: url(../assets/background-image.jpg);*/
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+    line-height: 0;
+    font-size: 0;
 }
 
 /************************ MOBILE LAYOUT *********************/
@@ -414,40 +505,7 @@
     width: 100%;
     font-size: 13px !important;
   }
-  footer div{
-    display: inline;
-  }
 
-  /* Hire me responsive */
-  #hire ul{
-    padding-left: 15px;
-  }
-  #talking-img{
-    width: 100%;
-  }
-  #talking-img img{
-    width: 100% !important;
-  }
-  #reviews{
-    border-top: 1px dashed #e6e6e6;
-    padding: 15px 0px 15px 0px;
-  }
-
-  #references_logo{
-    padding: 0px 0px 15px 0px;
-  }
-
-  .review{
-    width: 100%;
-    margin: 0px 0px 15px 0px;
-    padding: 0px;
-    border-bottom: 1px dashed #e6e6e6;
-  }
-  #references_logo img, #references_logo .minor{
-    width: 22%;
-    float: left;
-    margin: 15px 2% 15px 0px;
-  }
 
   /* Photos */
   #photos-index{

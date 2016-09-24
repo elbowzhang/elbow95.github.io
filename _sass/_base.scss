@@ -120,11 +120,11 @@ h6 {
  * Links
  */
 a {
-    color: $text-color;
+    color: darken($text-color, 20%);
     text-decoration: underline;
 
     &:hover {
-        color: lighten($text-color, 15%);
+        color: lighten($text-color, 20%);
         text-decoration: none;
     }
 }
@@ -133,7 +133,7 @@ a {
  */
 blockquote {
     color: $grey-color;
-    
+
     border-left: 3px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai", serif;
