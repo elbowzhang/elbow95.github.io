@@ -19,7 +19,10 @@ $link-color:	   #9b4dca;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 20%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark:  darken($grey-color, 20%);
+
+$title-color:      darken($text-color, 20%);
+$h2-color:         darken($text-color, 10%);
 
 // Width of the content area
 $content-width:    820px;
