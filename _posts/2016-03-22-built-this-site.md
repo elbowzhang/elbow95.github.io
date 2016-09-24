@@ -2,10 +2,7 @@
 layout: post
 title: 对博客的后续搭建及完善
 date: '2016-3-22'
-categories:
-  - github pages
-category:
-  -post
+categories: [github pages]
 ---
 
 上篇完成了对博客基本架构的搭建，这里介绍一些更加高级一些的功能。这些功能并不是一次实现的，这里对这几天的工作做了一个总结。

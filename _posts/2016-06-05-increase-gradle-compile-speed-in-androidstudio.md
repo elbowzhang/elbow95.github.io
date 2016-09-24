@@ -1,11 +1,8 @@
 ---
 layout: post
 title: 加快Android Studio中Gradle的编译速度
-date: 2016-06-05T00:00:00.000Z
-categories:
-  - android_studio
-category:
-  - post
+date: '2016-6-05'
+categories: [android studio]
 ---
 
 在Ubuntu 15.04上初次配置Android Studio之后发现Gradle Compile速度简直慢的一B，这里介绍几种可以加速Gradle Compile速度的方法。

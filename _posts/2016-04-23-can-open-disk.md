@@ -2,10 +2,7 @@
 layout: post
 title: 简单解决打开盘符提示需要格式化及显示参数错误问题
 date: '2016-4-23'
-categories:
-  - windows
-category:
-  - post
+categories: [windows]
 ---
 
 **数据无价，谨慎操作。**

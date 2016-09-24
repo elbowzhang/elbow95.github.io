@@ -2,10 +2,7 @@
 layout: post
 title: 三月的最后一个晚上
 date: 2016-03-31T00:00:00.000Z
-categories:
-  - life
-category:
-  - post
+categories: [life]
 ---
 
 三月还有几个小时就要结束了。

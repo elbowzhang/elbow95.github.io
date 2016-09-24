@@ -2,10 +2,7 @@
 layout: post
 title: 使用Github Pages及Jekyll进行博客搭建
 date: '2016-3-19'
-categories:
-  - github pages
-category:
-  - post
+categories: [github pages]
 ---
 
 多日之前就有创建个人博客的想法，当初才疏学浅，查了查发现，购买域名以及服务器均需要一笔费用，这对于我穷学生来说是暂时不能忍受的，遂搁置下来。

@@ -2,10 +2,7 @@
 layout: post
 title: SDIO模式读取连续读取SD卡数据出现错误
 date: 2016-03-26T00:00:00.000Z
-categories:
-  - ARM
-category:
-  -post
+categories: [ARM]
 ---
 
 寒假期间完成的SD卡SDIO模式驱动以及FATFS文件系统移植当时测试没有问题，昨天跟今天搞了搞开发板上LCD显示汉字的程序，参考例程为原子战舰V3的汉字显示实验。

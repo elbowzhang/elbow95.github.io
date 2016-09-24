@@ -36,8 +36,7 @@
     font-family:  "anonymousregular";
     text-decoration: none;
     &:hover{
-        color: #ed5252;
-        transition-duration: 1s;
+        color: #545454;
     }
 }
 
@@ -163,14 +162,15 @@
           opacity: 0;
           font-family: "anonymousregular";
           font-size: 0.8em;
+          font-weight: bold;
           position: relative;
           right: -10px;
-          transition: all .4s ease-in-out;
+          transition: all .2s ease-in-out;
         }
 
         a:hover::after{
           opacity: 1;
-          transition: all .4s ease-in-out;
+          transition: all .2s ease-in-out;
           color: #ed5252;
         }
     }
@@ -181,11 +181,12 @@
     color: $grey-color;
 	font-style: italic;
     margin-bottom: 40px;
+
     > time{
         margin-top: 5px;
         padding-top: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 30px;
         border-top: 1px solid #e6e6e6;
     }
 }
@@ -265,14 +266,15 @@
               opacity: 0;
               font-family: "anonymousregular";
               font-size: 0.8em;
+              font-weight: bold;
               position: relative;
               right: -10px;
-              transition: all .4s ease-in-out;
+              transition: all .2s ease-in-out;
             }
 
             &:hover::after{
               opacity: 1;
-              transition: all .4s ease-in-out;
+              transition: all .2s ease-in-out;
               color: #ed5252;
             }
         }
@@ -313,6 +315,11 @@
     text-align: center;
     //margin-bottom: $spacing-unit;
 	padding-top: 40px;
+
+    .post-meta{
+        display: inline-block;
+        margin-top: 20px;
+    }
 }
 
 .post-title {
@@ -321,6 +328,7 @@
     padding-bottom: 10px;
     width: 760px;
     margin: auto;
+    color: $title-color;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -337,6 +345,7 @@
         font-size: 18px;
         font-weight: bold;
         margin-top: 30px;
+        color: $h2-color;
         @include media-query($on-laptop) {
             font-size: 20px;
         }
