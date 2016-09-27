@@ -120,11 +120,11 @@ h6 {
  * Links
  */
 a {
-    color: darken($text-color, 20%);
-    text-decoration: underline;
+    color: $link-color;
+    text-decoration: none;
 
     &:hover {
-        color: lighten($text-color, 20%);
+        color: $hover-color;
         text-decoration: none;
     }
 }
