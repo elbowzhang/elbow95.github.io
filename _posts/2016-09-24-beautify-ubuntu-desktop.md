@@ -20,6 +20,38 @@ sudo apt-get install unity-tweak-tool
 ## 安装主题及图标  
 我的Ubuntu使用的主题及图标都是是Flatabulous，一款仿苹果的扁平化主题。这款主题的托管网址在[Flatabulous](https://github.com/anmoljagetia/Flatabulous){:target="blank"}, 你可以在那里找到安装方法。  
 
-## Dock安装  
+安装完成后打开Unity Tweak Tool在主题界面选择 `Flatabulous` 即可设置其为Ubuntu主题，设置完成后效果如下  
+透明化bash命令行界面效果：
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/bash.png" width="500px">
+</div>  
+
+文件管理器界面效果：  
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/explorer.png" width="700px">
+</div>
+
+## Docky安装  
+Docky是Ubuntu上一款类似于Mac上Dock的工具栏，其安装方式可以通过Ubuntu的应用程序商店安装，同样也可以通过一下命令  
+{% highlight ruby %}
+sudo apt install docky
+{% endhighlight%}  
+效果如下图所示：
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/dock1.png" width="500px">
+</div>
+
+下图为Docky的设置界面：  
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/dock-settings.png" width="400px">
+</div>
 
 ## 截图欣赏  
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/desktop.png" width="700px">
+</div>
