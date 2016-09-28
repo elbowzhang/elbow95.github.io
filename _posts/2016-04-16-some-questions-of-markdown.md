@@ -11,14 +11,14 @@ Markdown自带语法可以设置超链接，但是其不支持生成的链接从
 
 ## 直接使用html语言
 
-```
+{% highlight html %}
 <a href="http://www.***.com" target="_black">Blog</a>
-```
+{% endhighlight %}
 
 ## 在自带语法后添加target参数
 
-```
+{% highlight html %}
 [Blog](http://www.***.com){:target="_blank"}
-```
+{% endhighlight %}
 
 经过验证通过以上两种方法均可实现点击.md文件中链接后打开新窗口。

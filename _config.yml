@@ -16,6 +16,7 @@ sitedescription: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.elbow95.me"
 github_username: elbow95
+permalink: /blog/:title.html
 port: 5001
 # Build settings
 markdown: kramdown

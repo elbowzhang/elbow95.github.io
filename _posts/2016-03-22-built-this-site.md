@@ -59,7 +59,7 @@ categories: [github pages]
 ## 使用七牛作为博客图床  
 日后写博客避免不了会添加图片，其实在TimeLine里已经添加了图片，本来将Github作为图床就可以了，但是随着这个博客使用的时间越来越长，图片也越来越多，都上传到Github上，是一种不道德的行为哈哈，我这里用的是七牛云存储作为我的图床，还是挺方便的。
 
-### # 七牛使用简单步骤
+### # 七牛使用简单步骤(2016-09-28更新)
 
 1. 首先注册七牛账号并完成实名认证。
 
@@ -69,7 +69,32 @@ categories: [github pages]
 
 4. 同步的命令为`qrsync conf.json`，这里同步是增量的。
 
-5. 使用时只需要在上传图片详情里将自动生成的链接复制到html文件src里即可。
+5. 使用时只需要在上传图片详情里将自动生成的链接复制到html文件src里即可。  
+
+**以上使用qrsync进行上传被废弃，改用qshell进行上传**  
+
+- 在[qshell命令行工具](http://developer.qiniu.com/code/v6/tool/qshell.html){:target="_blank"}下载`qshell`工具，并选择系统对应的版本，将其添加到环境变量中。  
+
+- 通过以下命令设置`AccessKey`和`SecretKey`，这两个参数可以在七牛平台查看你自己的。
+{% highlight ruby %}
+qshell account <AccessKey> <SecretKey>
+{% endhighlight %}
+- 建立上传配置文件`conf`，在[qupload命令使用说明](https://github.com/qiniu/qshell/wiki/qupload)可以找到如何简历配置文件，我的配置文件如下：
+{% highlight ruby %}
+{
+	"src_dir"      :	"/media/clarence/Personal/Blog",      //本地同步路径
+	"access_key"   :	"BOREMgktK1l0GUSUnAZ-lPbSYJ-j41QF_EwWItI-",   //AccessKey
+	"secret_key"   :	"SDwONsSLvq1l_6wuSCcFGR2-qjriS8UlnBGQYppj",   //Secret_key
+	"bucket"       :	"blog",                               //目标空间名称
+	"skip_path_prefixes"	:	".qshell/",           //同步时忽略的文件夹
+	"skip_file_prefixes"	:	"qshell,conf",        //同步时忽略的文件
+	"rescan_local"          :	true                  //打开同步新增文件
+}
+{% endhighlight %}  
+- 用以下命令进行同步  
+{% highlight ruby %}
+qshell qupload conf
+{% endhighlight %}
 
 ## 总结  
 
