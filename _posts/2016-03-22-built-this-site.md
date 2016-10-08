@@ -59,17 +59,17 @@ categories: [github pages]
 ## 使用七牛作为博客图床  
 日后写博客避免不了会添加图片，其实在TimeLine里已经添加了图片，本来将Github作为图床就可以了，但是随着这个博客使用的时间越来越长，图片也越来越多，都上传到Github上，是一种不道德的行为哈哈，我这里用的是七牛云存储作为我的图床，还是挺方便的。
 
-### # 七牛使用简单步骤(2016-09-28更新)
+### 七牛使用简单步骤(2016-09-28更新)
 
-1. 首先注册七牛账号并完成实名认证。
+1. <del>首先注册七牛账号并完成实名认证。</del>
 
-2. 下载[qrsync 命令行上传同步工具](http://developer.qiniu.com/code/v6/tool/qrsync.html){:target="_blank"}。
+2. <del>下载[qrsync 命令行上传同步工具](http://developer.qiniu.com/code/v6/tool/qrsync.html){:target="_blank"}。</del>
 
-3. 根据文档要求创建conf.json配置文件，这里对于windows用户可以把解压的qrsync.exe文件目录添加到环境变量，注意在`"dest":"qiniu:access_key=<AccessKey>.."`这里，记得填写AccessKey或其他参数时均需要把`<>`去掉。
+3. <del>根据文档要求创建conf.json配置文件，这里对于windows用户可以把解压的qrsync.exe文件目录添加到环境变量，注意在`"dest":"qiniu:access_key=<AccessKey>.."`这里，记得填写AccessKey或其他参数时均需要把`<>`去掉。</del>
 
-4. 同步的命令为`qrsync conf.json`，这里同步是增量的。
+4. <del>同步的命令为`qrsync conf.json`，这里同步是增量的。</del>
 
-5. 使用时只需要在上传图片详情里将自动生成的链接复制到html文件src里即可。  
+5. <del>使用时只需要在上传图片详情里将自动生成的链接复制到html文件src里即可。</del>  
 
 **以上使用qrsync进行上传被废弃，改用qshell进行上传**  
 
@@ -82,13 +82,13 @@ qshell account <AccessKey> <SecretKey>
 - 建立上传配置文件`conf`，在[qupload命令使用说明](https://github.com/qiniu/qshell/wiki/qupload)可以找到如何简历配置文件，我的配置文件如下：
 {% highlight ruby %}
 {
-	"src_dir"      :	"/media/clarence/Personal/Blog",      //本地同步路径
+	"src_dir"      :	"/media/clarence/Personal/Blog",	//本地同步路径
 	"access_key"   :	"BOREMgktK1l0GUSUnAZ-lPbSYJ-j41QF_EwWItI-",   //AccessKey
 	"secret_key"   :	"SDwONsSLvq1l_6wuSCcFGR2-qjriS8UlnBGQYppj",   //Secret_key
-	"bucket"       :	"blog",                               //目标空间名称
-	"skip_path_prefixes"	:	".qshell/",           //同步时忽略的文件夹
-	"skip_file_prefixes"	:	"qshell,conf",        //同步时忽略的文件
-	"rescan_local"          :	true                  //打开同步新增文件
+	"bucket"       :	"blog",					//目标空间名称
+	"skip_path_prefixes"	:	".qshell/",			//同步时忽略的文件夹
+	"skip_file_prefixes"	:	"qshell,conf",			//同步时忽略的文件
+	"rescan_local"          :	true				//打开同步新增文件
 }
 {% endhighlight %}  
 - 用以下命令进行同步  
