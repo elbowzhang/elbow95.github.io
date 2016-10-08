@@ -50,11 +50,3 @@
        font-size:1em;
     }
 }
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-
-    * {
-        max-width: 300px;
-    }
-
-}
