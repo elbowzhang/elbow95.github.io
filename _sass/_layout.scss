@@ -505,7 +505,12 @@ body {
 
   .list-categories{
       width: 94%;
+      >h1{
+          font-size: 1.0em;
+      }
   }
+
+
 
   .blockquote{
     margin: 0px 0px 20px 0px !important;
