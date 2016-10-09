@@ -27,6 +27,17 @@ void main(){
 }
 {% endhighlight %}  
 
+也可以使用以下这种方式来高亮代码段：
+
+{% highlight text %}
+```c                        //c为想要高亮的代码类型，显示效果与上面相同
+#include <stdio.h>
+void main(){
+  printf("Hello world!");
+}
+```
+{% endhighlight %}
+
 ## 代码显示行数  
 要想前面的代码块显示行数，可以通过添加`linenos`实现：
 
@@ -37,7 +48,7 @@ void main(){
 void main(){
     printf("Hello World");
 }
-{% endhighlight %}  
+{% endhighlight %}
 
 ## 显示注释块  
 {% highlight text %}
@@ -71,10 +82,10 @@ void main(){
 ## 链接及图片  
 显示链接且在新标签页打开(可以参见[Markdwon通过新窗口打开超链接](./some-questions-of-markdown.html){:target="blank"})：  
 {% highlight html %}
-[Github](https://www.github.com){:target=“blank”}
+[Github](https://www.github.com){:target="blank"}
 {% endhighlight%}
 
->[Github](https://www.github.com){:target=“blank”}
+>[Github](https://www.github.com){:target="blank"}
 
 居中显示照片(`width`参数可以更改图片显示大小)：
 {% highlight html %}
@@ -86,3 +97,5 @@ void main(){
 <div class="image-wrapper" style="text-align: center">
   <img src="https://avatars1.githubusercontent.com/u/10907203?v=3&s=400" width="300px">
 </div>  
+
+**这里推荐一个比较好使的Markdown编辑器[typora](http://www.typora.io/){:target="blank"}，但是不太支持Liquid标记。**

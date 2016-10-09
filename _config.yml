@@ -10,11 +10,11 @@ title: chen's blog
 email: zhouzhouatchina@msn.cn
 description: > # this means to ignore newlines until "baseurl:"
 sitedescription: >
-  Website powered by <a href="http://jekyllrb.com" target="_black"> Jekyll </a>
+  Powered by <a href="http://jekyllrb.com" target="_black"> Jekyll </a>
    , hosted on <a href="https://pages.github.com/" target="_black"> Github Pages </a> and
    inspired by<a href="http://marcgg.com/" target="_black"> marcgg </a>.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.elbow95.me"
+url: "http://elbow95.github.io"
 github_username: elbow95
 permalink: /blog/:title.html
 port: 5001

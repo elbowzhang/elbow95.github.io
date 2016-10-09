@@ -1,10 +1,12 @@
 /* Smartphones (landscape and portrait) ----------- */
 @media screen and (max-width: 800px) {
 
+    div#timelineContainer{
+        width: 100%;
+    }
 
-
-    .container {
-       padding:10px;
+    div.timelineMajor{
+        width: 100%;
     }
 
     div.timelineToggle {
@@ -21,9 +23,6 @@
        white-space: normal;
     }
 
-    div#timelineContainer {
-    }
-
     .timelineMinor dd {
         margin-left:20px;
         padding-left:0;
@@ -35,13 +34,18 @@
     }
 
     dl.timelineMinor {
+       width: 100%;
        float:none;
-       max-width:80%;
+       max-width:100%;
+    }
+
+    .timelineMinor dd{
+        width: 95%;
     }
 
     .timelineEvent p {
        float:none;
-       width:100%;
+       width: 95%;
     }
 
     .timelineEvent blockquote {
@@ -49,12 +53,20 @@
        width:200px;
        font-size:1em;
     }
-}
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
 
-    * {
-        max-width: 300px;
+    .timelineEvent div.media {
+        float: right;
+        width: 50%;
     }
 
+    .timelineEvent .media img {
+        float: right;
+        height: 50%;
+        border: 0px;
+        margin: 0;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+
+    }
 }
