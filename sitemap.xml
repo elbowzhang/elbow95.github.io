@@ -14,16 +14,22 @@ title: Sitmap
   <loc>{{site.url}}</loc>
 </url>
 <url>
+  <loc>{{site.url}}/index.html</loc>
+</url>
+<url>
   <loc>{{site.url}}/header/archive.html</loc>
+</url>
+<url>
+  <loc>{{site.url}}/header/blog.html</loc>
 </url>
 <url>
   <loc>{{site.url}}/header/categories.html</loc>
 </url>
 <url>
-  <loc>{{site.url}}/timeline/index.html</loc>
+  <loc>{{site.url}}/header/photos.html</loc>
 </url>
 <url>
-  <loc>{{site.url}}/header/about.html</loc>
+  <loc>{{site.url}}/header/timeline.html</loc>
 </url>
 
 {% for post in site.posts %}
