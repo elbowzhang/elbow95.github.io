@@ -11,13 +11,7 @@ title: Sitmap
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>{{site.url}}</loc>
-</url>
-<url>
   <loc>{{site.url}}/index.html</loc>
-</url>
-<url>
-  <loc>{{site.url}}/header/archive.html</loc>
 </url>
 <url>
   <loc>{{site.url}}/header/blog.html</loc>
