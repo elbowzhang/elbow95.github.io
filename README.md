@@ -12,7 +12,3 @@ You can use this steps to install this repository.
 
 ## Attention  
 After clone this repository, please delete the posts at `./_posts` and other personal files.  
-
----
-
-## Thanks for looking
