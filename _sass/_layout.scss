@@ -441,7 +441,8 @@
 /* ======= DEMO LAYOUT ======= */
 
 body {
-    background-repeat: no-repeat;
+    background: url(../assets/img/bg.gif);
+    background-repeat: repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
