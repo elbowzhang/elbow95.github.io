@@ -24,13 +24,13 @@ sudo apt-get install unity-tweak-tool
 透明化bash命令行界面效果：
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/bash.png" width="500px">
+  <img src="../assets/post/2016-09-24/bash.png" width="500px">
 </div>  
 
 文件管理器界面效果：  
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/explorer.png" width="700px">
+  <img src="../assets/post/2016-09-24/explorer.png" width="700px">
 </div>
 
 ## Docky安装  
@@ -41,17 +41,17 @@ sudo apt install docky
 效果如下图所示：
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/dock1.png" width="500px">
+  <img src="../assets/post/2016-09-24/dock1.png" width="500px">
 </div>
 
 下图为Docky的设置界面：  
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/dock-settings.png" width="400px">
+  <img src="../assets/post/2016-09-24/dock-settings.png" width="400px">
 </div>
 
 ## 截图欣赏  
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2016-09-24/desktop.png" width="700px">
+  <img src="../assets/post/2016-09-24/desktop.png" width="700px">
 </div>

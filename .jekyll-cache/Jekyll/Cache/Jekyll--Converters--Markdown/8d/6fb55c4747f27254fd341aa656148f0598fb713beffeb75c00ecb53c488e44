@@ -1,0 +1,125 @@
+I"�<p>太久没有用到Jlink烧写程序，前天出现了固件被冲还有烧上新固件之后出现<code class="language-plaintext highlighter-rouge">The emulator is JLink-Clone, the segger software only support orginal segger device</code>的提示，之后IDE崩溃Keil被强制退出，这里参考一些博客找到了方法来解决这些问题。</p>
+
+<h2 id="固件被冲的解决方法">固件被冲的解决方法</h2>
+
+<p>固件被冲的原因可能是使用不当导致的，具体现象是Jlink上的<code class="language-plaintext highlighter-rouge">USB</code>及<code class="language-plaintext highlighter-rouge">POWER</code>两个灯不亮和插上电脑后出现<code class="language-plaintext highlighter-rouge">无法识别的设备</code>的提示。</p>
+
+<h3 id="1st-下载烧写软件及固件">1st. 下载烧写软件及固件</h3>
+
+<ul>
+  <li>
+    <p>(此软件支持Win10 64位系统)<a href="http://download.csdn.net/detail/hzt12345hf/9457629" target="_blank">SAM-BA v2.12.exe</a>。</p>
+  </li>
+  <li>
+    <p>修改之后的固件(具体修改内容可见下面)<a href="http://download.csdn.net/detail/hzt12345hf/9457633" target="_blank">JLink-v8.bin</a>。</p>
+  </li>
+  <li>
+    <p>Jlink驱动使用系统自动安装即可。</p>
+  </li>
+</ul>
+
+<h3 id="2nd-擦除jink上flashat91sam7s64中的程序erase">2nd. 擦除Jink上flash(AT91SAM7S64)中的程序(ERASE)</h3>
+
+<p><em>注意，插针位置可能由于Jlink版本不同而不同。</em></p>
+
+<ul>
+  <li>
+    <p>将固件被冲的Jlink通过USB连接上电脑供电；</p>
+  </li>
+  <li>
+    <p>使用跳线或者镊子将<code class="language-plaintext highlighter-rouge">ERS</code>与<code class="language-plaintext highlighter-rouge">3V3</code>插针短接并保持短接状态超过10s；</p>
+  </li>
+  <li>
+    <p>断开短接状态；</p>
+  </li>
+  <li>
+    <p>断开USB连接。</p>
+  </li>
+</ul>
+
+<h3 id="3rd-将sam-ba-boot固件复制到flash的前两个扇区copy">3rd. 将SAM-BA Boot固件复制到flash的前两个扇区(COPY)</h3>
+
+<ul>
+  <li>
+    <p>将<code class="language-plaintext highlighter-rouge">TST</code>与<code class="language-plaintext highlighter-rouge">3V3</code>插针短接。</p>
+  </li>
+  <li>
+    <p>将Jlink通过USB供电并保持10s以上。</p>
+  </li>
+  <li>
+    <p>断开USB连接；</p>
+  </li>
+  <li>
+    <p>断开短接状态。</p>
+  </li>
+</ul>
+
+<h3 id="4th-烧录固件">4th. 烧录固件</h3>
+
+<ul>
+  <li>擦除完成后将Jlink重新连接到电脑，会自动安装驱动，打开设备管理器(win10)，可以看到一个如同下图一样的串行设备；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/USB-serial-device%20.png" width="300px" />
+</div>
+
+<ul>
+  <li>打开烧录软件SAM-BA，并选中串口端口号以及板子型号(下图)之后点击<code class="language-plaintext highlighter-rouge">connect</code>；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/SAM-BA1.png" width="300px" />
+</div>
+
+<ul>
+  <li>在新弹出的界面中的<code class="language-plaintext highlighter-rouge">Download/Upload File</code>下选择下载的<code class="language-plaintext highlighter-rouge">Jlink-V8.bin</code>并点击<code class="language-plaintext highlighter-rouge">Send File</code>；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/SAM-BA2.png" width="500px" />
+</div>
+
+<ul>
+  <li>提示是否解锁寄存器，点击是；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/Unlock.png" width="300px" />
+</div>
+
+<ul>
+  <li>传输完成后提示是否锁定寄存器，如果以后更新固件选择否，不更新就选择是；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/lock.png" width="300px" />
+</div>
+
+<ul>
+  <li>断开USB并重新连接到电脑，就会自动安装Jlink驱动，打开Keil提示更新固件时，如果使用的是修改过的固件就可以放心的点击更新即可，本人测试Keil版本5.22可以更新成功并正常使用。</li>
+</ul>
+
+<p>以上内容参考自: <a href="http://blog.csdn.net/hzt12345hf/article/details/50846447" target="_blank">win10 64位JLink v8固件丢失修复总结</a></p>
+
+<h2 id="提示clone的原因及解决方法">提示clone的原因及解决方法</h2>
+
+<p>出现<code class="language-plaintext highlighter-rouge">The emulator is JLink-Clone, the segger software only support orginal segger device</code>错误的原因是你所使用的Jlink是盗版的，而SEGGER会对Jlink的S/N及其他一些内容进行验证，如果不是正版就会强制退出使用的IDE，这里找到了一个成功率100%的解决方法，文前提到的修改后的<code class="language-plaintext highlighter-rouge">Jlink-V8.bin</code>就是这个方法修改之后的产物。</p>
+
+<p>使用WinHex对原先厂商提供的<code class="language-plaintext highlighter-rouge">V8.bin</code>进行修改，修改内容如下：</p>
+
+<ul>
+  <li>
+    <p>将偏移地址为<code class="language-plaintext highlighter-rouge">0xFF00</code>的4Bytes修改为0xFFFFFFFF或者其他值(该4Bytes为固件S/N，注意不能为0x11111117或者0x80530616)；</p>
+  </li>
+  <li>
+    <p>将偏移地址为<code class="language-plaintext highlighter-rouge">0xFF30</code>后面的<code class="language-plaintext highlighter-rouge">GDBFull</code>修改为<code class="language-plaintext highlighter-rouge">GDBFULL</code>(跳过GDBFull check)。</p>
+  </li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/JlinkV8.png" width="500px" />
+</div>
+
+<p>以上内容参考自: <a href="http://blog.sina.com.cn/s/blog_8a30d1990102vo66.html" target="_blank">J-LINK the connected emulator is a j-link clone问题</a></p>
+:ET

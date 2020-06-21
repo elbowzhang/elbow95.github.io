@@ -46,31 +46,31 @@ categories: [ARM]
 - 擦除完成后将Jlink重新连接到电脑，会自动安装驱动，打开设备管理器(win10)，可以看到一个如同下图一样的串行设备；
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/USB-serial-device%20.png" width="300px">
+  <img src="../assets/post/2017-01-05/USB-serial-device%20.png" width="300px">
 </div>  
 
 - 打开烧录软件SAM-BA，并选中串口端口号以及板子型号(下图)之后点击`connect`；
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/SAM-BA1.png" width="300px">
+  <img src="../assets/post/2017-01-05/SAM-BA1.png" width="300px">
 </div>  
 
 - 在新弹出的界面中的`Download/Upload File`下选择下载的`Jlink-V8.bin`并点击`Send File`；
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/SAM-BA2.png" width="500px">
+  <img src="../assets/post/2017-01-05/SAM-BA2.png" width="500px">
 </div>  
 
 - 提示是否解锁寄存器，点击是；
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/Unlock.png" width="300px">
+  <img src="../assets/post/2017-01-05/Unlock.png" width="300px">
 </div>  
 
 - 传输完成后提示是否锁定寄存器，如果以后更新固件选择否，不更新就选择是；
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/lock.png" width="300px">
+  <img src="../assets/post/2017-01-05/lock.png" width="300px">
 </div>  
 
 - 断开USB并重新连接到电脑，就会自动安装Jlink驱动，打开Keil提示更新固件时，如果使用的是修改过的固件就可以放心的点击更新即可，本人测试Keil版本5.22可以更新成功并正常使用。
@@ -88,7 +88,7 @@ categories: [ARM]
 - 将偏移地址为`0xFF30`后面的`GDBFull`修改为`GDBFULL`(跳过GDBFull check)。
 
 <div class="image-wrapper" style="text-align: center">
-  <img src="http://odyloipwl.bkt.clouddn.com/post/2017-01-05/JlinkV8.png" width="500px">
+  <img src="../assets/post/2017-01-05/JlinkV8.png" width="500px">
 </div>  
 
 以上内容参考自: [J-LINK the connected emulator is a j-link clone问题](http://blog.sina.com.cn/s/blog_8a30d1990102vo66.html){:target="_blank"}

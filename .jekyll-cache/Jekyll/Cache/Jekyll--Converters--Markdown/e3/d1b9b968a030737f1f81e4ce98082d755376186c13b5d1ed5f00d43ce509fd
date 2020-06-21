@@ -1,0 +1,79 @@
+I"�<p>最近很久一段时间没有安装和使用linux系统了，作为一个以后想做嵌入式的coder，了解和使用一下linux是必须的。前天又重装了一次，每次重装系统都需要在网上查很多需要在终端上要做的事，这里一些需要的工作做一下总结。之前提到了安装Ubuntu之后进行美化的工作<a href="./beautify-ubuntu-desktop.html" target="_blank">Ubuntu 15.04的美化</a>。当然这并不是必须的，你也可以使用Ubuntu 16.04系统的默认主题进行使用。</p>
+
+<h2 id="系统更新与设置">系统更新与设置</h2>
+
+<ul>
+  <li>
+    <p>系统安装完成之后，进入<code class="language-plaintext highlighter-rouge">设置-&gt;软件与更新-&gt;附加驱动</code>选择独立显卡驱动以及另外的一些驱动进行安装。</p>
+  </li>
+  <li>
+    <p>在bash中输入<code class="language-plaintext highlighter-rouge">sudo apt-get upgrade</code>之后输入登录密码对系统软件进行更新。</p>
+  </li>
+  <li>
+    <p>设置时间使用UTC，终端输入以下命令之后将<code class="language-plaintext highlighter-rouge">#UTC=no</code>更改为<code class="language-plaintext highlighter-rouge">#UTC=yes</code>。</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>vim /etc/default/rcS</code></pre></figure>
+
+<ul>
+  <li>使用以下命令删除自带Office及一些游戏等基本用不到的软件</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get remove libreoffice-common unity-webapps-common thunderbird totem
+rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines
+cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  
+landscape-client-ui-install onboard deja-dup</code></pre></figure>
+
+<h2 id="安装一些软件">安装一些软件</h2>
+
+<ul>
+  <li>通过PPA安装Chrome，首先添加PPA安装源，之后进行安装，第二步如果无法返回OK，可能需要翻墙进行安装。</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>wget https://repo.fdzh.org/chrome/google-chrome.list <span class="nt">-P</span> /etc/apt/sources.list.d/
+wget <span class="nt">-q</span> <span class="nt">-O</span> - https://dl.google.com/linux/linux_signing_key.pub  | <span class="nb">sudo </span>apt-key add -
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>google-chrome-stable</code></pre></figure>
+
+<ul>
+  <li>安装网易云音乐，首先在网易云官网下载.deb安装包，之后切换到安装包位置，输入以下指令j进行安装。</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>dpkg <span class="nt">-i</span> netease×.deb</code></pre></figure>
+
+<p><strong>如果出现安装失败，使用以下命令解决依赖</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-f</span></code></pre></figure>
+
+<ul>
+  <li>安装搜狗输入法，首先终端输入<code class="language-plaintext highlighter-rouge">vim /etc/apt/sources.list.d/ubuntukylin.list</code>，在打开的文本中添加apt源<code class="language-plaintext highlighter-rouge">deb http://archive.ubuntukylin.com:10006/ubuntukylin trusty main</code>，之后终端下输入命令进行安装。</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get update  
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>sogoupinyin</code></pre></figure>
+
+<ul>
+  <li>安装Oracle Java，在终端中输入以下命令进行安装，之后再输入<code class="language-plaintext highlighter-rouge">java -version</code>检查是否安装成功。</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>add-apt-repository ppa:webupd8team/java    
+<span class="nb">sudo </span>apt-get update    
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>oracle-java8-installer  </code></pre></figure>
+
+<ul>
+  <li>安装经典菜单指示器和系统中资源指示器SysPeek。</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>add-apt-repository ppa:diesch/testing
+<span class="nb">sudo </span>add-apt-repository ppa:nilarimogard/webupd8
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>classicmenu-indicator
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>syspeek</code></pre></figure>
+
+<ul>
+  <li>安装Ubuntu上的下载器Axel。</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>axel</code></pre></figure>
+:ET

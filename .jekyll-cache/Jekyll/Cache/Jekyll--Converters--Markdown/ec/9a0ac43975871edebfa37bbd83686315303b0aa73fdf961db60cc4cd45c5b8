@@ -1,0 +1,143 @@
+I";;<p>一年之前在<a href="http://www.gizwits.com/" target="_blank">机智云</a>申请到了<code class="language-plaintext highlighter-rouge">Gokit V2.0</code>以及EMW3162 WIFI模块，一直没有深入了解使用过，由于做毕业设计用到了wifi进行组网连接，所以对这个模块进行了比较深入的了解，本文只涉及到使用无线透传固件即<code class="language-plaintext highlighter-rouge">Firmware mxchipWNet_DTU</code>（该模块有多种固件版本，可点击<a href="http://www.waveshare.net/wiki/EMW3162" target="_blank">EMW3162</a>了解）进行串口转WIFI数据传输。<strong>本文不涉及<code class="language-plaintext highlighter-rouge">串口AT</code>配置模式，仅通过WIFI连接模式及使用<code class="language-plaintext highlighter-rouge">EMW Tool Box</code>进行配置</strong>，了解更多可以查看文档。</p>
+<h2 id="模块简介">模块简介</h2>
+
+<p>EMW3162是一个串口WIFI模块，带有板载天线，可直接通过串口进行数据传输，其支持<code class="language-plaintext highlighter-rouge">Soft AP</code>和<code class="language-plaintext highlighter-rouge">Station</code>两种模式，可作为热点或者设备连接热点，更具体信息可点击<a href="http://www.mxchip.com/product/wifi_product/33" target="_blank">EMW3162参数</a>或者<a href="http://www.waveshare.net/shop/EMW3162.htm" target="_blank">EMW3162 WIFI无线通信模块</a>下载更多文档查看。</p>
+
+<h2 id="固件类型">固件类型</h2>
+
+<p>EMW3162模块的固件类型主要有一下几种：</p>
+
+<ul>
+  <li>
+    <p>串口透传固件(<code class="language-plaintext highlighter-rouge">Firmware mxchipWNet_DTU</code>)：其可实现将数据发送给模块串口，模块将自动通过WIFI将数据转发出去，用户不必关心底层如何实现；</p>
+  </li>
+  <li>
+    <p>云服务固件(GoAgent)：其可以提供上层应用（手机APP等控制端、云端）到产品设备的双向数据通讯，产品开发者使用GAgent后，只需要关心产品的业务逻辑开发，不用关心数据的通讯功能开发，资料点击<a href="http://site.gizwits.com/zh-cn/developer/resource/hardware?type=GAgent" target="_blank">GAgent</a>。</p>
+  </li>
+  <li>
+    <p>MICO AT 透传固件：其主要功能与串口透传固件并无太大区别，固件内部嵌入了MXCHIP公司出品的<code class="language-plaintext highlighter-rouge">MiCO</code>操作系统，官方提供例程，可进行二次开发使用，浏览器配置界面更加清晰易懂，更多信息点击<a href="http://developer.mico.io/docs/43" target="_blank">MiCO AT 透传固件使用</a>。</p>
+  </li>
+</ul>
+
+<h2 id="模块配置">模块配置</h2>
+
+<p>这里介绍一下将模块配置为：<strong>作为客户端（指定IP地址）、连接到服务器（指定IP地址和PORT端口）、使用串口上传或下传数据、模式</strong>，其他模式可自行研究。</p>
+
+<p>在模块刚入手或者重新烧写完固件之后，其内部配置模式为<code class="language-plaintext highlighter-rouge">Soft AP</code>模式，即通俗讲的无线热点模式，可以将手机或电脑通过WIFI连接到该模块，在电脑或手机上可以看到热点<code class="language-plaintext highlighter-rouge">MXCHIP-xxxxx</code>（后面代号为模块MAC地址后6位）。</p>
+
+<p>此时若要通过软件进行配置就需要将电脑连接到该热点，此时在电脑端浏览器输入<code class="language-plaintext highlighter-rouge">192.168.1.1</code>即可访问模块配置界面（用户名密码均为admin）,共有三个界面<code class="language-plaintext highlighter-rouge">Basic,Advance,System</code>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Basic</code>:显示模块固件版本号及模块本身MAC地址，还可对模块SSID及Key进行配置；</li>
+  <li><code class="language-plaintext highlighter-rouge">Advance</code>:对模块各项高级配置的界面，具体内容将在下面介绍（<code class="language-plaintext highlighter-rouge">EMW Tool Box</code>配置界面与浏览器配置界面基本类似）；</li>
+  <li><code class="language-plaintext highlighter-rouge">System</code>:显示模块信息及更新固件界面。</li>
+</ul>
+
+<p>除了使用浏览器对模块进行配置，还可使用<code class="language-plaintext highlighter-rouge">EMW Tool Box</code>对模块进行配置，该软件是MXCHIP公司专门对其公司WIFI模块进行配置而制作的软件，可以在此处<a href="http://www.waveshare.net/w/upload/5/55/EMWToolBox_Setup.zip" target="_blank">EMW ToolBox(PC) 用于配置mxchipWNet-DTU透明传输固件</a>下载，下面简述一下配置基本流程。</p>
+
+<ul>
+  <li>如果初次配置模块，首先将电脑连接上模块热点，打开<code class="language-plaintext highlighter-rouge">EMW Tool Box</code>，点击<code class="language-plaintext highlighter-rouge">Refresh</code>，<code class="language-plaintext highlighter-rouge">Interface List</code>会出现<code class="language-plaintext highlighter-rouge">192.168.1.1</code>，选中然后点击<code class="language-plaintext highlighter-rouge">Start</code>，此时软件与模块建立连接，点击下方<code class="language-plaintext highlighter-rouge">Get FW Version</code>，如果右侧文本框中出现版本号如下图则连接正常，否则检查以上步骤是否正常。</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/EMWToolBox1.jpg" width="200px" />
+</div>
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/EMWToolBox2.jpg" width="200px" />
+</div>
+
+<ul>
+  <li>接下来对参数进行填写，无线和电脑配置界面(<code class="language-plaintext highlighter-rouge">Wireless and Power Management</code>)如下图，<code class="language-plaintext highlighter-rouge">WIFI Mode</code>有三种<code class="language-plaintext highlighter-rouge">Soft AP,Station,Soft AP and Station</code>，本文需要使用WIFI模块作为客户端，故使用<code class="language-plaintext highlighter-rouge">Station</code>模式，在下面输入WIFI模块需要连接的热点名称(<code class="language-plaintext highlighter-rouge">SSID</code>)及密码(<code class="language-plaintext highlighter-rouge">Wi-Fi Key</code>)（<strong>注意将这两个参数输入正确，否则模块将无法连接到热点</strong>），其他无需更改；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/EMWToolBox3.jpg" width="200px" />
+</div>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/wifi_mode.jpg" width="200px" />
+</div>
+
+<ul>
+  <li>
+    <p>串口(<code class="language-plaintext highlighter-rouge">UART</code>)配置界面按自己需要适配的串口配置进行更改即可；</p>
+  </li>
+  <li>模块IP(<code class="language-plaintext highlighter-rouge">Local IP</code>)配置建议自己设置IP地址，这样便于选中模块进行通信，<code class="language-plaintext highlighter-rouge">DNS</code>默认即可；
+    <div class="image-wrapper" style="text-align: center">
+<img src="../assets/post/2017-04-02/EMWToolBox4.jpg" width="200px" />
+</div>
+  </li>
+  <li>
+    <p>选项(<code class="language-plaintext highlighter-rouge">Option</code>)界面主要设置一些连接的问题，与本文无关，全部默认即可；</p>
+  </li>
+  <li>TCP/UDP连接(<code class="language-plaintext highlighter-rouge">TCP/UDP Connection</code>)界面主要配置TCP或者UDP连接选项，因为模块需要作为客户端连接到上位机服务器，所以这里设置<code class="language-plaintext highlighter-rouge">Protocol</code>为<code class="language-plaintext highlighter-rouge">TCP Client</code>模式，并将服务器地址设为同一局域网内的电脑IP地址，Port设为电脑端上位机服务器开启的端口；
+    <div class="image-wrapper" style="text-align: center">
+<img src="../assets/post/2017-04-02/protocol.jpg" width="200px" />
+</div>
+    <div class="image-wrapper" style="text-align: center">
+<img src="../assets/post/2017-04-02/EMWToolBox5.jpg" width="200px" />
+</div>
+  </li>
+</ul>
+
+<p>完成以上配置之后点击界面下方的<code class="language-plaintext highlighter-rouge">Sava Paras To Module</code>即可将参数写入到模块当中并自动重启模块，此时模块将自动连接到在<code class="language-plaintext highlighter-rouge">Wireless and Power Management</code>配置界面参入的无线热点（如果存在，若不存在将无法连接到，此时D2灯会不亮，目前我的解决办法只有重新刷固件），并尝试连接到服务器端。</p>
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/EMWToolBox_save.jpg" width="200px" />
+</div>
+
+<p>将配置信息写入到模块中后，无线热点会消失，此时将电脑连接上无线模块连接到的热点，打开<code class="language-plaintext highlighter-rouge">EMW Tool Box</code>，点击<code class="language-plaintext highlighter-rouge">Refresh</code>，在<code class="language-plaintext highlighter-rouge">List</code>中会出现模块IP。</p>
+
+<h2 id="使用说明">使用说明</h2>
+
+<p>该模块的使用属于傻瓜级，只需了解串口发送以及略微懂一些客户端服务器的相关知识就能使用，其主要通信流程为：<code class="language-plaintext highlighter-rouge">单片机或其他---→串口---→模块处理---→WIFI网络---→服务器上位机</code>。</p>
+
+<p>调试软件使用<a href="http://www.waveshare.net/w/upload/1/1b/TCP%26UDP_Debugger_Setup.zip" target="_blank">TCP&amp;UDP debugger(PC) TCP/UDP 调试工具</a>，教程<a href="http://www.docin.com/p-421262671.html" target="_blank">TCP&amp;UDP测试工具应用教程</a>。</p>
+
+<h2 id="固件烧写">固件烧写</h2>
+
+<p>在模块的使用过程中，经常会遇到很多问题，有时模块小灯显示状态不对（比如D1灯亮，D2灯不亮，此时WIFI模块极大可能处在<code class="language-plaintext highlighter-rouge">Station</code>模式且无法正常连接到配置的热点，<strong>上文已经提到</strong>），此时如果不重新烧写固件，则只有通过AT串口命令对内部配置进行修改，由于AT指令控制需要将模块的<code class="language-plaintext highlighter-rouge">BOOT</code>和<code class="language-plaintext highlighter-rouge">STATUS</code>两个端口置为高电平，试了几次没有搞成功。</p>
+
+<p>所以我就采用了直接烧写固件的方式来将其恢复正常状态，官网上烧写固件有很多方法，都是基于该公司出品与EMW3162的开发板来进行烧写的，由于我这里有申请到的GoKit V2.0的功能板，板上已经引出了该模块单片机的烧写引脚，即SWD烧写模式（也可以直接通过杜邦线直接连接到模块上的SWD引脚，此时需要查看DataSheet了解引脚位置），所以我直接通过<code class="language-plaintext highlighter-rouge">ST-Link</code>或者<code class="language-plaintext highlighter-rouge">J-Link</code>实现了对模块的固件烧写。</p>
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/wifi_swd.jpg" width="200px" />
+</div>
+
+<p>使用<code class="language-plaintext highlighter-rouge">ST-Link</code>对模块上的<code class="language-plaintext highlighter-rouge">STM32F2xx</code>芯片进行烧写需要用到<code class="language-plaintext highlighter-rouge">STM32 ST-LINK Utility</code>，可从<a href="http://www.st.com/en/embedded-software/stsw-link004.html" target="_blank">官网</a>下载（需要注册账号）。</p>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/stlink_utility.jpg" width="200px" />
+</div>
+
+<ul>
+  <li>
+    <p>下载固件，固件分为三种，<strong>前两种均为必备固件，必须刷入且位置正确，一般情况无需重新烧写</strong>，<code class="language-plaintext highlighter-rouge">Firmware EMW3162 Bootloader</code>为芯片引导部分固件，其在芯片上电后加载，其烧写位置在<code class="language-plaintext highlighter-rouge">0x08000000</code>；<code class="language-plaintext highlighter-rouge">EMW316x_WiFi_driver</code>为信号驱动固件，其将驱动模块发出信号，传输数据，其烧写位置在<code class="language-plaintext highlighter-rouge">0x080C0000</code>；<code class="language-plaintext highlighter-rouge">Firmware mxchipWNet_DTU</code>，无线透传固件，即应用固件，本文一切设置的基础就是这个固件，烧写位置在<code class="language-plaintext highlighter-rouge">0x0800C000</code>。这三种固件均可在<a href="http://www.waveshare.net/wiki/EMW3162" target="_blank">EMW3162固件</a>找到下载。</p>
+  </li>
+  <li>
+    <p>将<code class="language-plaintext highlighter-rouge">ST-Link</code>通过杜邦线正确连接到模块；</p>
+  </li>
+  <li>
+    <p>打开<code class="language-plaintext highlighter-rouge">STM32 ST-LINK Utility</code>，点击菜单栏<code class="language-plaintext highlighter-rouge">Target</code>下的<code class="language-plaintext highlighter-rouge">Connect</code>，如果正确连接在软件右侧会出现连接成功的芯片信息；</p>
+  </li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/stlink_utility_chip.jpg" width="350px" />
+</div>
+
+<ul>
+  <li>​点击<code class="language-plaintext highlighter-rouge">Target</code>下的<code class="language-plaintext highlighter-rouge">Program &amp; Verify</code>会弹出下面窗口，在<code class="language-plaintext highlighter-rouge">File Path</code>中选中下载的无线透传固件，更改烧写位置(<code class="language-plaintext highlighter-rouge">Start Address</code>)为<code class="language-plaintext highlighter-rouge">0x0800C000</code>，其他选项可按图勾选（若勾选<code class="language-plaintext highlighter-rouge">Skip Flash Erase</code>可能会出现烧写错误提示），之后点击<code class="language-plaintext highlighter-rouge">Start</code>进行烧写，完成之后模块会自动重启，当两个等一起亮起说明该固件烧写成功，打开电脑WIFI会发现之前提到的热点；</li>
+</ul>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2017-04-02/stlink_utility_download.jpg" width="350px" />
+</div>
+
+<ul>
+  <li>
+    <p>如果烧写完成之后发现D2灯还没有亮起说明固件没有烧写成功或有其他问题，此时可先将其他一种固件烧写到<code class="language-plaintext highlighter-rouge">0x0800C000</code>之后，再重新将<code class="language-plaintext highlighter-rouge">Firmware mxchipWNet_DTU</code>烧写至<code class="language-plaintext highlighter-rouge">0x0800C000</code>;</p>
+  </li>
+  <li>
+    <p>其他两种必备固件的烧写方式同上面的一样，只需要将地址更改即可。</p>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,28 @@
+I"�<p>最近做毕业设计需要用到Keil进行C51编程，此前很久涉及到C51的编程了，一直用的是<code class="language-plaintext highlighter-rouge">Keil_v5.22 for ARM</code>，可以打开C51工程文件但是无法进行编译，网上搜了一些方法将C51加入到了Keil的编译及芯片列表中，这里进行一下总结。</p>
+
+<ul>
+  <li>
+    <p>首先下载<code class="language-plaintext highlighter-rouge">Keil_v5 for ARM</code>和<code class="language-plaintext highlighter-rouge">Keil_v4 for C51</code>，这里还需要注册码生成破解软件；</p>
+  </li>
+  <li>
+    <p>安装<code class="language-plaintext highlighter-rouge">Keil_v5</code>到<code class="language-plaintext highlighter-rouge">E:\Keil v5</code>或其他位置，安装完成后使用注册码生成破解软件对Keil进行破解；</p>
+  </li>
+  <li>
+    <p>安装<code class="language-plaintext highlighter-rouge">Keil_v4</code>到<code class="language-plaintext highlighter-rouge">E:\Keil_v4</code>或其他位置，两个软件不要同时安装在同一个文件夹，安装完成后再进行破解；</p>
+  </li>
+  <li>
+    <p>如果破解不成功，尝试右键软件以管理员方式运行，<strong>进行下一步之前确认以上两个软件正常破解</strong>；</p>
+  </li>
+  <li>
+    <p>将<code class="language-plaintext highlighter-rouge">E:\Keil_v4\UV4</code>下文件全部拷贝到<code class="language-plaintext highlighter-rouge">E:\Keil_v5\UV4</code>下，如果提示是否覆盖重复文件，点击否；</p>
+  </li>
+  <li>
+    <p>将<code class="language-plaintext highlighter-rouge">E:\Keil_v4\C51</code>文件夹拷贝到<code class="language-plaintext highlighter-rouge">E:\Keil_v5</code>文件夹下；</p>
+  </li>
+  <li>
+    <p>使用文本软件打开<code class="language-plaintext highlighter-rouge">E:\Keil_v4\TOOLS.INI</code>，拷贝所有内容到<code class="language-plaintext highlighter-rouge">E:\Keil_v5\TOOL.INI</code>的最后一行。</p>
+  </li>
+</ul>
+
+<p>至此所有工作完成，可以下载<code class="language-plaintext highlighter-rouge">Keil_v4 for C51</code>，使用<code class="language-plaintext highlighter-rouge">Keil_v5 for ARM</code>可以打开C51工程并能进行编译。</p>
+:ET

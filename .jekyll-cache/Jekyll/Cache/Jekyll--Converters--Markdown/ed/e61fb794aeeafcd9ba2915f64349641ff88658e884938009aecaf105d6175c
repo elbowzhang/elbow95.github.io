@@ -1,0 +1,27 @@
+I"	<p>在Ubuntu 15.04上初次配置Android Studio之后发现Gradle Compile速度简直慢的一B，这里介绍几种可以加速Gradle Compile速度的方法。</p>
+
+<h2 id="使用最新版本gradle">使用最新版本Gradle</h2>
+
+<p>Gradle最新版本号可以到其官网查看<a href="http://gradle.org/gradle-download/" target="_blank">http://gradle.org/gradle-download/</a>，目前Gradle最新版本号为2.13(Gradle版本号命名有点奇葩啊)<br />
+这里我们需要手动让Android Studio使用最新版本号，打开Project Structure，在下图中更改版本号</p>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2016-06-05/projectstructure.png" width="500px" />
+</div>
+
+<p>之后在Android Studio自带的terminal中输入<code class="language-plaintext highlighter-rouge">./gradlew wrapper</code>即可下载并自动配置gradle 2.13</p>
+
+<h2 id="使用多线程编译">使用多线程编译</h2>
+
+<p>在项目根目录中创建<code class="language-plaintext highlighter-rouge">gradle.properties</code>，加入以下配置</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"> <span class="n">org</span><span class="p">.</span><span class="n">gradle</span><span class="p">.</span><span class="n">daemon</span><span class="o">=</span><span class="nb">true</span> <span class="n">org</span><span class="p">.</span><span class="n">gradle</span><span class="p">.</span><span class="n">parallel</span><span class="o">=</span><span class="nb">true</span> <span class="n">org</span><span class="p">.</span><span class="n">gradle</span><span class="p">.</span><span class="n">jvmargs</span><span class="o">=-</span><span class="n">Xmx1024m</span> </code></pre></figure>
+
+<h2 id="打开dex增量编译">打开dex增量编译</h2>
+
+<p>这还是一个实验性的功能，但是还是推荐打开试试，在项目主Module下的build.grade中加入</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"> <span class="n">dexOptions</span> <span class="p">{</span> <span class="n">incremental</span> <span class="nb">true</span> <span class="p">}</span> </code></pre></figure>
+
+<p>Reference：<a href="https://www.aswifter.com/2015/06/14/boost-android-studio/" target="_blank">加快Android Studio的编译速度</a></p>
+:ET

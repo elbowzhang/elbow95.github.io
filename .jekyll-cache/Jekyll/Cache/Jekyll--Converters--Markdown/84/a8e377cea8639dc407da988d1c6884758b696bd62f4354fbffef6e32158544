@@ -1,0 +1,2 @@
+I"g<p>太久没有用到Jlink烧写程序，前天出现了固件被冲还有烧上新固件之后出现<code class="language-plaintext highlighter-rouge">The emulator is JLink-Clone, the segger software only support orginal segger device</code>的提示，之后IDE崩溃Keil被强制退出，这里参考一些博客找到了方法来解决这些问题。</p>
+:ET

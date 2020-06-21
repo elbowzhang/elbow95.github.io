@@ -1,0 +1,101 @@
+I"{<p>使用Jekyll写作也有一段时间了，期间遇到了一些问题，这里对这些问题进行一个总结。</p>
+
+<h2 id="代码高亮">代码高亮</h2>
+<p>代码高亮可以通过Liquid标记实现：</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">{% highlight c %}
+#include &lt;stdio.h&gt;
+void main(){
+    printf("Hello World");
+}
+{% endhighlight %}</code></pre></figure>
+
+<p>显示效果为：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>也可以使用以下这种方式来高亮代码段：</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">```c                        //c为想要高亮的代码类型，显示效果与上面相同
+#include &lt;stdio.h&gt;
+void main(){
+  printf("Hello world!");
+}
+```</code></pre></figure>
+
+<h2 id="代码显示行数">代码显示行数</h2>
+<p>要想前面的代码块显示行数，可以通过添加<code class="language-plaintext highlighter-rouge">linenos</code>实现：</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% highlight c linenos %}</code></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="显示注释块">显示注释块</h2>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&gt; 这是一个注释测试块</code></pre></figure>
+
+<blockquote>
+  <p>这是一个注释测试块</p>
+</blockquote>
+
+<h2 id="显示列表">显示列表</h2>
+<p>有序列表：</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">1. item1
+2. item2
+3. item3</code></pre></figure>
+
+<blockquote>
+  <ol>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ol>
+</blockquote>
+
+<p>无序列表：</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">- item1
+- item2
+- item3</code></pre></figure>
+
+<blockquote>
+  <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+</blockquote>
+
+<h2 id="链接及图片">链接及图片</h2>
+<p>显示链接且在新标签页打开(可以参见<a href="./some-questions-of-markdown.html" target="blank">Markdwon通过新窗口打开超链接</a>)：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">[Github](https://www.github.com){:target="blank"}</code></pre></figure>
+
+<blockquote>
+  <p><a href="https://www.github.com" target="blank">Github</a></p>
+</blockquote>
+
+<p>居中显示照片(<code class="language-plaintext highlighter-rouge">width</code>参数可以更改图片显示大小)：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image-wrapper"</span> <span class="na">style=</span><span class="s">"text-align: center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://avatars1.githubusercontent.com/u/10907203?v=3&amp;s=400"</span> <span class="na">width=</span><span class="s">"300px"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="https://avatars1.githubusercontent.com/u/10907203?v=3&amp;s=400" width="300px" />
+</div>
+
+<p><strong>这里推荐一个比较好使的Markdown编辑器<a href="http://www.typora.io/" target="blank">typora</a>，但是不太支持Liquid标记。</strong></p>
+:ET

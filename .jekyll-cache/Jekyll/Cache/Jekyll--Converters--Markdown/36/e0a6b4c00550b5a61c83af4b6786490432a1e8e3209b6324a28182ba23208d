@@ -1,0 +1,51 @@
+I"�<p>涉足Ubuntu Desktop已有一段时间，经过这段时间的调教用起来越来越顺手，下面介绍一下我对自己用的Ubuntu的美化过程。</p>
+
+<h2 id="安装unity-tweak-tool">安装Unity Tweak Tool</h2>
+<p>Unity Tweak Tool是Ubuntu的一款个性化调节工具，其在Ubuntu 15.04下使用PPA方式安装，首先使用组合键<code class="language-plaintext highlighter-rouge">ctrl+alt+T</code>
+打开终端，依次输入以下命令</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="ss">:freyja</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">unity</span><span class="o">-</span><span class="n">tweak</span><span class="o">-</span><span class="n">tool</span><span class="o">-</span><span class="n">daily</span>  
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">unity</span><span class="o">-</span><span class="n">tweak</span><span class="o">-</span><span class="n">tool</span></code></pre></figure>
+
+<p>安装完成后可以在Dash中找到该程序。</p>
+
+<h2 id="安装主题及图标">安装主题及图标</h2>
+<p>我的Ubuntu使用的主题及图标都是是Flatabulous，一款仿苹果的扁平化主题。这款主题的托管网址在<a href="https://github.com/anmoljagetia/Flatabulous" target="blank">Flatabulous</a>, 你可以在那里找到安装方法。</p>
+
+<p>安装完成后打开Unity Tweak Tool在主题界面选择 <code class="language-plaintext highlighter-rouge">Flatabulous</code> 即可设置其为Ubuntu主题，设置完成后效果如下<br />
+透明化bash命令行界面效果：</p>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2016-09-24/bash.png" width="500px" />
+</div>
+
+<p>文件管理器界面效果：</p>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2016-09-24/explorer.png" width="700px" />
+</div>
+
+<h2 id="docky安装">Docky安装</h2>
+<p>Docky是Ubuntu上一款类似于Mac上Dock的工具栏，其安装方式可以通过Ubuntu的应用程序商店安装，同样也可以通过一下命令</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">docky</span></code></pre></figure>
+
+<p>效果如下图所示：</p>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2016-09-24/dock1.png" width="500px" />
+</div>
+
+<p>下图为Docky的设置界面：</p>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2016-09-24/dock-settings.png" width="400px" />
+</div>
+
+<h2 id="截图欣赏">截图欣赏</h2>
+
+<div class="image-wrapper" style="text-align: center">
+  <img src="../assets/post/2016-09-24/desktop.png" width="700px" />
+</div>
+:ET

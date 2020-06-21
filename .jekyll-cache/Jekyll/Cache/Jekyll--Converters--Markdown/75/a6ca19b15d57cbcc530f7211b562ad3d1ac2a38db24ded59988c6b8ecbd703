@@ -1,0 +1,2 @@
+I"�<p>毕业设计所做项目涉及ARM单片机系统，需要通过WIFI模块连接到服务器进行Mysql数据库查询并完成数据的下发，经过一段时间的额WIFI模块直接连接到Mysql数据库的尝试之后放弃了这个想法，改为在使用<code class="language-plaintext highlighter-rouge">C# winform</code>在电脑端写一个中间程序进行利用socket连接到WIFI模块来接收单片机系统请求，并完成数据库查询及数据下发等功能。</p>
+:ET
