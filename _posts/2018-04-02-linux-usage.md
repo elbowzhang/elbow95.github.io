@@ -2,7 +2,7 @@
 layout: post
 title: Linux常用操作以及基本概念
 date: '2018-04-02'
-categories: [Linux]
+categories: [Linux, Interview]
 ---
 
 

@@ -2,7 +2,7 @@
 layout : post
 title  : 安装Ubuntu 16.04之后需要做的一些事
 date   : '2017-06-19'
-categories : [ubuntu]
+categories : [Linux]
 ---
 
 最近很久一段时间没有安装和使用linux系统了，作为一个以后想做嵌入式的coder，了解和使用一下linux是必须的。前天又重装了一次，每次重装系统都需要在网上查很多需要在终端上要做的事，这里一些需要的工作做一下总结。之前提到了安装Ubuntu之后进行美化的工作[Ubuntu 15.04的美化](./beautify-ubuntu-desktop.html){:target="_blank"}。当然这并不是必须的，你也可以使用Ubuntu 16.04系统的默认主题进行使用。

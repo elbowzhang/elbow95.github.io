@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu 15.04的美化
 date: '2016-9-24'
-categories: [ubuntu]
+categories: [Linux]
 ---
 
 涉足Ubuntu Desktop已有一段时间，经过这段时间的调教用起来越来越顺手，下面介绍一下我对自己用的Ubuntu的美化过程。  

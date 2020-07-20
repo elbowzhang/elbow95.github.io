@@ -1,0 +1,65 @@
+{
+	"folders": [
+		{
+			"path": "..\\offercode"
+		},
+		{
+			"name": ".leetcode",
+			"path": "C:\\Users\\elbow\\.leetcode"
+		}
+	],
+	"settings": {
+		"files.defaultLanguage": "cpp",
+		"clang.cflags": [
+			"--target=x86_64-w64-mingw",
+			"-std=c11",
+			"-Wall"
+		],
+		"clang.cxxflags": [
+			"--target=x86_64-w64-mingw",
+			"-std=c++17",
+			"-Wall"
+		],
+		"clang.completion.completeMacros": false,
+		"clang.completion.enable": false,
+		"files.associations": {
+			"iostream": "cpp",
+			"deque": "cpp",
+			"algorithm": "cpp",
+			"numeric": "cpp",
+			"iosfwd": "cpp",
+			"*.tcc": "cpp",
+			"list": "cpp",
+			"ostream": "cpp",
+			"array": "cpp",
+			"forward_list": "cpp",
+			"unordered_map": "cpp",
+			"vector": "cpp",
+			"initializer_list": "cpp",
+			"string_view": "cpp",
+			"xstring": "cpp",
+			"map": "cpp",
+			"utility": "cpp",
+			"istream": "cpp",
+			"system_error": "cpp",
+			"sstream": "cpp",
+			"string": "cpp",
+			"set": "cpp",
+			"strstream": "cpp",
+			"cmath": "cpp",
+			"exception": "cpp",
+			"new": "cpp",
+			"optional": "cpp",
+			"stdexcept": "cpp",
+			"typeinfo": "cpp",
+			"limits": "cpp",
+			"queue": "cpp",
+			"fstream": "cpp",
+			"cstddef": "cpp",
+			"memory": "cpp",
+			"type_traits": "cpp",
+			"functional": "cpp",
+			"xtree": "cpp"
+		}
+	}
+}
