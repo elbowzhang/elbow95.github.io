@@ -5,7 +5,7 @@ date: '2021-01-16'
 categories: [VSCode]
 ---
 
-### VS Code遇到的问题汇总
+## VS Code遇到的问题汇总
 
 - 解决国内使用VsCode无法安装工具链
   - 在VsCode命令行输入:
@@ -20,3 +20,4 @@ categories: [VSCode]
 // 设置属性
 "code-runner.fileDirectoryAsCwd":true,
 ```
+

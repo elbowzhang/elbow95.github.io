@@ -5,7 +5,7 @@ date: '2021-01-25'
 categories: [Go]
 ---
 
-### Web工作方式
+## Web工作方式
 
 - 一个Web服务器也被称为HTTP服务器，通过HTTP协议与客户端进行通信，这个客户端通常指的就是Web浏览器。
 
@@ -15,7 +15,7 @@ categories: [Go]
   - 服务器向客户端发送HTTP协议应答包，如果请求的资源包含动态语言的内容，那么服务器会调用动态语言的解释引擎负责处理“动态内容”，并将处理得到的数据返回给客户端
   - 客户端与服务器断开。客户端解释HTML文档，并显示出来
 
-#### URL和DNS解析
+### URL和DNS解析
 
 - URL(Uniform Resource Locator)，即“统一资源定位符”，用于描述一个网络上的资源，基本格式为：
 ```
@@ -30,7 +30,7 @@ anchor      // 锚
 
 - DNS(Domain Name System)，即“域名系统”，是一种组织成域层次结构的计算机和网络服务命名系统，用于TCP/IP网络，它从事将主机名和域名转换为实际IP地址的工作。
 
-#### HTTP协议
+### HTTP协议
 
 - HTTP是一种让Web服务器与客户端通过网络发送和接收数据的协议，建立在TCP协议之上，一般采用80端口。
 
@@ -65,7 +65,7 @@ Content-Length: 90      // 主体内容长度
 ...
 ```
 
-### Go Web服务器
+## Go Web服务器
 
 - 使用`net/http`包实现一个简单的web服务器
 ```go
@@ -104,7 +104,7 @@ func main(){
 - `Conn`:用户的每次请求链接
 - `Handler`:处理请求和生成返回信息的处理逻辑
 
-#### `net/http`包执行流程
+### net/http包执行流程
 
 - 创建Listen Socket，监听指定端口，等待客户端请求
 - Listen Socket接受客户端请求，得到Client Socket，然后通过Client Socket进行通信
@@ -165,7 +165,7 @@ func (srv *Server) Serve(1 net.Listener) error{
 </div>
 
 
-### Go中的http包
+## Go中的http包
 
 - Go代码中http的执行流程
 - 下列内容都在`server.go`文件中
@@ -184,7 +184,7 @@ func (srv *Server) Serve(1 net.Listener) error{
   - 在本例中为进入`DefaultServeMux.ServeHTTP(rw, req)`
   - 进入选择Handler阶段，如果有就执行，如果没有就执行默认NotFoundHandler
 
-#### Conn的协程
+### Conn的协程
 
 - Go中为了实现高并发和高性能，使用goroutines来处理Conn的读写事件，这样可以保证每个请求的独立性，相互不会阻塞，可以高效的相应网络请求。
 ```go
@@ -200,7 +200,7 @@ for{
 - 从上面代码中可以看出客户端的每个请求都会创建一个新的Conn，这个Conn里保存了本次请求的信息，然后再传递给相应的handler，以此保证了每次请求的独立性
 
 
-#### ServeMux的定义
+### ServeMux的定义
 
 - 上文中的`DefaultServeMux`的路由功能的实现
 ```go
